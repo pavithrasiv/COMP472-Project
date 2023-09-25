@@ -266,6 +266,12 @@ class Game:
         self.set(Coord(md,md-2),Unit(player=Player.Attacker,type=UnitType.Program))
         self.set(Coord(md-1,md-1),Unit(player=Player.Attacker,type=UnitType.Firewall))
 
+    def print_board(self):
+        board_output = self.to_string()
+        print(board_output)
+
+
+
     def clone(self) -> Game:
         """Make a new copy of a game for minimax recursion.
 
