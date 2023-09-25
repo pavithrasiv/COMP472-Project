@@ -331,21 +331,42 @@ class Game:
             return False
 
         #check unit type
+        move = self.read_move
+        row_increment, row_decrement, column_increment, column_decrement = move
+        row_increment.row += 1
+        column_increment.column += 1
+        row_decrement -= 1
+        column_decrement -= 1
+
         unit = self.get(coords)
         if unit.type != UnitType.Virus | UnitType.Tech:
-
-
-
-
-
+            if self.in_combat(self, coords) is True:
+                return False
+            elif unit.type == Player.Attacker:
+                if move == row_increment | column_increment:
+                    return False
+            elif unit.type == Player.Defender:
+                if move == row_decrement | column_decrement:
+                    return False    
         return (unit is None)
+    
     def in_combat(self, coords):
+       row_increment, row_decrement, column_increment, column_decrement = coords
+       row_increment.row += 1
+       row_decrement.row -= 1
+       column_increment.column += 1
+       column_decrement.column -= 1
 
-        empty = self.is_empty(self, coords)
-        if empty is False:
-
-
-
+    # if the cell is not empty, the unit is in combat 
+       if not row_increment.is_empty:
+           return True
+       if not row_decrement.is_empty:
+           return True
+       if not column_increment.is_empty:
+           return True
+       if not column_decrement.is_empty:
+           return True   
+        
 
     def perform_move(self, coords : CoordPair) -> Tuple[bool,str]:
         """Validate and perform a move expressed as a CoordPair. TODO: WRITE MISSING CODE!!!"""
