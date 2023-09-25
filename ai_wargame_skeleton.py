@@ -285,6 +285,7 @@ class Game:
         """Check if contents of a board cell of the game at Coord is empty (must be valid coord)."""
         return self.board[coord.row][coord.col] is None
 
+
     def get(self, coord : Coord) -> Unit | None:
         """Get contents of a board cell of the game at Coord."""
         if self.is_valid_coord(coord):
@@ -323,7 +324,28 @@ class Game:
         if unit is None or unit.player != self.next_player:
             return False
         unit = self.get(coords.dst)
+
+        #validation of is_empty
+        empty = self.is_empty(self, coords)
+        if empty is False:
+            return False
+
+        #check unit type
+        unit = self.get(coords)
+        if unit.type != UnitType.Virus | UnitType.Tech:
+
+
+
+
+
         return (unit is None)
+    def in_combat(self, coords):
+
+        empty = self.is_empty(self, coords)
+        if empty is False:
+
+
+
 
     def perform_move(self, coords : CoordPair) -> Tuple[bool,str]:
         """Validate and perform a move expressed as a CoordPair. TODO: WRITE MISSING CODE!!!"""
@@ -574,7 +596,8 @@ def main():
     # the main game loop
     while True:
         print()
-        print(game)
+        #print the board
+        print(game.to_string())
         winner = game.has_winner()
         if winner is not None:
             print(f"{winner.name} wins!")
