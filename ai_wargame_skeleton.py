@@ -326,46 +326,65 @@ class Game:
         unit = self.get(coords.dst)
 
         #validation of is_empty
-        empty = self.is_empty(self, coords)
-        if empty is False:
+        empty = self.is_empty(coords.dst)
+        if not empty:
             return False
 
         #check unit type
-        move = self.read_move
-        row_increment, row_decrement, column_increment, column_decrement = move
-        row_increment.row += 1
-        column_increment.column += 1
-        row_decrement -= 1
-        column_decrement -= 1
+        move = coords.src
+        adjacent_coords = list(move.iter_adjacent())
 
-        unit = self.get(coords)
-        if unit.type != UnitType.Virus | UnitType.Tech:
-            if self.in_combat(self, coords) is True:
+        row_decrement = adjacent_coords[0]
+        column_decrement = adjacent_coords[1]
+        row_increment = adjacent_coords[2]
+        column_increment = adjacent_coords[3]
+
+        unit = self.get(coords.src)
+        if unit.type != UnitType.Virus and unit.type != UnitType.Tech:
+            if self.in_combat(coords) is True:
                 return False
-            elif unit.type == Player.Attacker:
-                if move == row_increment | column_increment:
+            if unit.player is Player.Attacker:
+                if move is row_increment or move is column_increment:
                     return False
-            elif unit.type == Player.Defender:
-                if move == row_decrement | column_decrement:
+            if unit.player is Player.Defender:
+                if move is row_decrement or move is column_decrement:
                     return False    
-        return (unit is None)
+        return True
     
-    def in_combat(self, coords):
-       row_increment, row_decrement, column_increment, column_decrement = coords
-       row_increment.row += 1
-       row_decrement.row -= 1
-       column_increment.column += 1
-       column_decrement.column -= 1
+    def in_combat(self, coords) -> bool:
+        """ Checks adjacent cells for enemy units. If present, unit is in combat"""
+        adjacent_coords = list(coords.src.iter_adjacent())
 
-    # if the cell is not empty, the unit is in combat 
-       if not row_increment.is_empty:
-           return True
-       if not row_decrement.is_empty:
-           return True
-       if not column_increment.is_empty:
-           return True
-       if not column_decrement.is_empty:
-           return True   
+        row_decrement = adjacent_coords[0]
+        column_decrement = adjacent_coords[1]
+        row_increment = adjacent_coords[2]
+        column_increment = adjacent_coords[3]
+
+
+    # if the cell is not empty, the unit is in combat
+        
+        if self.is_valid_coord(row_increment):
+            if not self.is_empty(row_increment):
+                unit = self.get(row_increment)
+                if unit.player is not self.next_player:
+                    return True
+        if self.is_valid_coord(row_decrement):
+            if not self.is_empty(row_decrement) and self.is_valid_coord(row_decrement):
+                unit = self.get(row_decrement)
+                if unit.player is not self.next_player:
+                    return True
+        if self.is_valid_coord(column_increment):
+            if not self.is_empty(column_increment) and self.is_valid_coord(column_increment):
+                unit = self.get(column_increment)
+                if unit.player is not self.next_player:
+                    return True
+        if self.is_valid_coord(column_decrement):
+            if not self.is_empty(column_decrement) and self.is_valid_coord(column_decrement):
+                unit = self.get(column_decrement)
+                if unit.player is not self.next_player:
+                    return True
+        
+        return False
         
 
     def perform_move(self, coords : CoordPair) -> Tuple[bool,str]:
