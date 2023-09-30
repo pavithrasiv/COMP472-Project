@@ -270,6 +270,29 @@ class Game:
         board_output = self.to_string()
         print(board_output)
 
+    #attacking function to attack neighboring and remove code!!!---------------------------------------------------------------------
+    def attack(self, src_coord: Coord, dst_coord: Coord) -> bool:
+        
+        # Check if the source and destination coordinates are valid.
+        if not self.is_valid_coord(src_coord) or not self.is_valid_coord(dst_coord):
+            return False
+
+        attacker = self.get(src_coord)
+        defender = self.get(dst_coord)
+
+        if attacker is None or defender is None or attacker.player == defender.player:
+            return False
+
+        damage = attacker.damage_amount(defender)
+        defender.mod_health(-damage)
+
+        if defender.health <= 0:
+            # Remove the defeated unit from the board.
+            self.set(dst_coord, None)
+
+        return True
+
+
 
 
     def clone(self) -> Game:
@@ -393,6 +416,14 @@ class Game:
             self.set(coords.dst,self.get(coords.src))
             self.set(coords.src,None)
             return (True,"")
+        elif self.is_valid_attack(coords):
+            # If the move is a valid attack, call the attack function.
+            success = self.attack(coords.src, coords.dst)
+            if success:
+                return (True, "Attack successful")
+            else:
+                return (False, "Invalid attack")
+
         return (False,"invalid move")
 
     def next_turn(self):
