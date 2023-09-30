@@ -98,6 +98,10 @@ class Unit:
         if target.health + amount > 9:
             return 9 - target.health
         return amount
+    
+    def self_destruct(self):
+        """Reduce health of unit to self-destruct"""
+        self.health = 0
 
 ##############################################################################################################
 
@@ -314,6 +318,8 @@ class Game:
         target = self.get(coord)
         if target is not None:
             target.mod_health(health_delta)
+            #delete the unit only if health is equal to 0 or less
+            #if target.mod_health <= 0:
             self.remove_dead(coord)
 
     def is_valid_move(self, coords : CoordPair) -> bool:
@@ -325,10 +331,17 @@ class Game:
             return False
         unit = self.get(coords.dst)
 
-        #validation of is_empty
+        """#validation of is_empty
         empty = self.is_empty(coords.dst)
         if not empty:
-            return False
+            return False"""
+        
+        if self.get(coords.dst) is None or self.get(coords.dst).player != self.next_player:
+            empty = self.is_empty(coords.dst)
+        
+        #check if unit is trying to self-destruct
+        if coords.src == coords.dst:
+            return True
 
         #check unit type
         move = coords.src
@@ -340,7 +353,7 @@ class Game:
         column_increment = adjacent_coords[3]
 
         unit = self.get(coords.src)
-        if unit.type != UnitType.Virus and unit.type != UnitType.Tech:
+        if empty and unit.type != UnitType.Virus and unit.type != UnitType.Tech:
             if self.in_combat(coords) is True:
                 return False
             if unit.player is Player.Attacker:
@@ -390,10 +403,30 @@ class Game:
     def perform_move(self, coords : CoordPair) -> Tuple[bool,str]:
         """Validate and perform a move expressed as a CoordPair. TODO: WRITE MISSING CODE!!!"""
         if self.is_valid_move(coords):
+
+            #check that the source unit is not empty
+            if self.get(coords.src) is not None:
+                #check that the target unit is not empty
+                if self.get(coords.dst) is not None:
+                    damage = self.get(coords.src).damage_amount(self.get(coords.dst))
+                    self.get(coords.dst).mod_health(-damage)
+
             self.set(coords.dst,self.get(coords.src))
             self.set(coords.src,None)
             return (True,"")
         return (False,"invalid move")
+    
+
+    def unit_self_destruct(self, coords: CoordPair) -> Tuple[bool, str]:
+        """Allow a unit to self destruct"""
+        unit = self.get(coords.src)
+
+        if unit is True:
+            unit.self_destruct()
+            self.set(coords.src, None)
+            return True
+        return False
+
 
     def next_turn(self):
         """Transitions game to the next turn."""
