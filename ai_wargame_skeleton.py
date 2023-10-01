@@ -8,10 +8,13 @@ from time import sleep
 from typing import Tuple, TypeVar, Type, Iterable, ClassVar
 import random
 import requests
+import logging
 
 # maximum and minimum values for our heuristic scores (usually represents an end of game condition)
 MAX_HEURISTIC_SCORE = 2000000000
 MIN_HEURISTIC_SCORE = -2000000000
+
+logging.basicConfig(filename='game_log.txt', level=logging.INFO)
 
 class UnitType(Enum):
     """Every unit type."""
@@ -269,6 +272,13 @@ class Game:
         self.set(Coord(md-2,md),Unit(player=Player.Attacker,type=UnitType.Program))
         self.set(Coord(md,md-2),Unit(player=Player.Attacker,type=UnitType.Program))
         self.set(Coord(md-1,md-1),Unit(player=Player.Attacker,type=UnitType.Firewall))
+
+        logging.info(f'---GAME PARAMETERS---\n')
+        logging.info(f'Time Value: {self.options.max_time}\n')
+        logging.info(f'Maximum number of turns: {self.options.max_turns}\n')
+        logging.info("\n")
+        logging.info(f'---Initial Configuration of the Game---\n')
+        logging.info("\n")
 
     def print_board(self):
         board_output = self.to_string()

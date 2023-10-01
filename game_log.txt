@@ -1,0 +1,12 @@
+INFO:root:---GAME PARAMETERS---
+
+INFO:root:Time Value: 5.0
+
+INFO:root:Maximum number of turns: 100
+
+INFO:root:
+
+INFO:root:---Initial Configuration of the Game---
+
+INFO:root:
+
