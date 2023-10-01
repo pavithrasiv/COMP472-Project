@@ -14,7 +14,7 @@ import logging
 MAX_HEURISTIC_SCORE = 2000000000
 MIN_HEURISTIC_SCORE = -2000000000
 
-logging.basicConfig(filename='game_log.txt', level=logging.INFO)
+logging.basicConfig(filename='game_log.txt', filemode='w', level=logging.INFO)
 
 class UnitType(Enum):
     """Every unit type."""
@@ -420,15 +420,23 @@ class Game:
                     self.get(coords.src).mod_health(-damage)
                     #Decrease health of the target unit according to the damage table
                     self.get(coords.dst).mod_health(-damage)
+                    logging.info('---Action Information---\n')
+                    logging.info(f'Turn #{self.turns_played+1}')
+                    logging.info(f'Unit at {coords.src.to_string()} attacked unit at {coords.dst.to_string()} by {self.next_player}\n')
                     if coords.src == coords.dst:
                         self.unit_self_destruct(coords)
                         self.set(coords.src, None)
+                        logging.info('---Action Information---\n')
+                        logging.info(f'Turn #{self.turns_played+1}')
+                        logging.info(f'Unit at {coords.src.to_string()} self destructed by {self.next_player}\n')
 
                 else:
                     #if there is no unit at the destination, move the source to that coordinate
                     self.set(coords.dst,self.get(coords.src))
                     self.set(coords.src,None)
-                    logging.info(f'move from {coords.src.to_string()} to {coords.dst.to_string()}\n')
+                    logging.info('---Action Information---\n')
+                    logging.info(f'Turn #{self.turns_played+1}')
+                    logging.info(f'move from {coords.src.to_string()} to {coords.dst.to_string()} by {self.next_player}\n')
             return (True,"")
         return (False,"invalid move")
     
@@ -717,6 +725,7 @@ def main():
         print()
         #print the board
         print(game.to_string())
+        logging.info(game.to_string())
         winner = game.has_winner()
         if winner is not None:
             print(f"{winner.name} wins!")

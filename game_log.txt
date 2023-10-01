@@ -10,79 +10,28 @@ INFO:root:---Initial Configuration of the Game---
 
 INFO:root:
 
-INFO:root:---GAME PARAMETERS---
+INFO:root:Next player: Attacker
+Turns played: 0
 
-INFO:root:Time Value: 5.0
+    0   1   2   3   4  
+A: dA9 dT9 dF9  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .  aP9 
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
 
-INFO:root:Maximum number of turns: 100
+INFO:root:---Action Information---
 
-INFO:root:
+INFO:root:Turn #1
+INFO:root:move from E2 to D1 by Player.Attacker
 
-INFO:root:---Initial Configuration of the Game---
+INFO:root:Next player: Defender
+Turns played: 1
 
-INFO:root:
-
-INFO:root:---GAME PARAMETERS---
-
-INFO:root:Time Value: 5.0
-
-INFO:root:Maximum number of turns: 100
-
-INFO:root:
-
-INFO:root:---Initial Configuration of the Game---
-
-INFO:root:
-
-INFO:root:---GAME PARAMETERS---
-
-INFO:root:Time Value: 5.0
-
-INFO:root:Maximum number of turns: 100
-
-INFO:root:
-
-INFO:root:---Initial Configuration of the Game---
-
-INFO:root:
-
-INFO:root:---GAME PARAMETERS---
-
-INFO:root:Time Value: 5.0
-
-INFO:root:Maximum number of turns: 100
-
-INFO:root:
-
-INFO:root:---Initial Configuration of the Game---
-
-INFO:root:
-
-INFO:root:---GAME PARAMETERS---
-
-INFO:root:Time Value: 5.0
-
-INFO:root:Maximum number of turns: 100
-
-INFO:root:
-
-INFO:root:---Initial Configuration of the Game---
-
-INFO:root:
-
-INFO:root:---GAME PARAMETERS---
-
-INFO:root:Time Value: 5.0
-
-INFO:root:Maximum number of turns: 100
-
-INFO:root:
-
-INFO:root:---Initial Configuration of the Game---
-
-INFO:root:
-
-INFO:root:move from E2 to D2
-
-INFO:root:move from A2 to A3
+    0   1   2   3   4  
+A: dA9 dT9 dF9  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .  aP9 
+D:  .  aP9  .  aF9 aV9 
+E:  .   .   .  aV9 aA9 
 
