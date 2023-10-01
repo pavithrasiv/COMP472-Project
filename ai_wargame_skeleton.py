@@ -318,8 +318,6 @@ class Game:
         target = self.get(coord)
         if target is not None:
             target.mod_health(health_delta)
-            #delete the unit only if health is equal to 0 or less
-            #if target.mod_health <= 0:
             self.remove_dead(coord)
 
     def is_valid_move(self, coords : CoordPair) -> bool:
@@ -413,6 +411,10 @@ class Game:
                     self.get(coords.src).mod_health(-damage)
                     #Decrease health of the target unit according to the damage table
                     self.get(coords.dst).mod_health(-damage)
+                    if coords.src == coords.dst:
+                        self.unit_self_destruct(coords)
+                        self.set(coords.src, None)
+
                 else:
                     #if there is no unit at the destination, move the source to that coordinate
                     self.set(coords.dst,self.get(coords.src))
@@ -426,13 +428,6 @@ class Game:
         unit = self.get(coords.src)
 
         if unit is not None:
-            #Damage health of 4 adjacent units to the self-destructing unit
-            surrounding_units = list(coords.src.iter_adjacent())
-            for i in surrounding_units:
-                units = self.get(i)
-                if units is not None:
-                    units.mod_health(-2)
-            
             #Damage health of 4 diagonal surrounding units from the self-destructing unit
             diagonal_units = list(coords.src.iter_range(1))
             for j in diagonal_units:
