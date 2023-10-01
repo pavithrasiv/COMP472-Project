@@ -364,10 +364,10 @@ class Game:
             if self.in_combat(coords) is True:
                 return False
             if unit.player is Player.Attacker:
-                if coords.dst.row >= row_increment.row or coords.dst.col >= column_increment.col or coords.dst.row < row_decrement.row or coords.dst.col < column_decrement.col:
+                if coords.dst != row_decrement and coords.dst != column_decrement:
                     return False
             if unit.player is Player.Defender:
-                if coords.dst.row <= row_decrement.row or coords.dst.col <= column_decrement.col or coords.dst.row > row_increment.row or coords.dst.col > column_increment.col:
+                if coords.dst != row_increment and coords.dst != column_increment:
                     return False    
         return True
     
