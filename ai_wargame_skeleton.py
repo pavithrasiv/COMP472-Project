@@ -98,6 +98,10 @@ class Unit:
         if target.health + amount > 9:
             return 9 - target.health
         return amount
+    
+    def self_destruct(self):
+        """Reduce health of unit to self-destruct"""
+        self.health = 0
 
 ##############################################################################################################
 
@@ -325,10 +329,17 @@ class Game:
             return False
         unit = self.get(coords.dst)
 
-        #validation of is_empty
+        """#validation of is_empty
         empty = self.is_empty(coords.dst)
         if not empty:
-            return False
+            return False"""
+        
+        if self.get(coords.dst) is None or self.get(coords.dst).player != self.next_player:
+            empty = self.is_empty(coords.dst)
+        
+        #check if unit is trying to self-destruct
+        if coords.src == coords.dst:
+            return True
 
         #check unit type
         move = coords.src
@@ -340,7 +351,7 @@ class Game:
         column_increment = adjacent_coords[3]
 
         unit = self.get(coords.src)
-        if unit.type != UnitType.Virus and unit.type != UnitType.Tech:
+        if empty and unit.type != UnitType.Virus and unit.type != UnitType.Tech:
             if self.in_combat(coords) is True:
                 return False
             if unit.player is Player.Attacker:
@@ -390,10 +401,45 @@ class Game:
     def perform_move(self, coords : CoordPair) -> Tuple[bool,str]:
         """Validate and perform a move expressed as a CoordPair. TODO: WRITE MISSING CODE!!!"""
         if self.is_valid_move(coords):
-            self.set(coords.dst,self.get(coords.src))
-            self.set(coords.src,None)
+
+            #check that the source unit is not empty
+            if self.get(coords.src) is not None:
+                #check that the target unit is not empty
+                if self.get(coords.dst) is not None:
+                    damage = self.get(coords.src).damage_amount(self.get(coords.dst))
+                    #Decrease health of the source unit according to the damage table
+                    self.get(coords.src).mod_health(-damage)
+                    #Decrease health of the target unit according to the damage table
+                    self.get(coords.dst).mod_health(-damage)
+                    if coords.src == coords.dst:
+                        self.unit_self_destruct(coords)
+                        self.set(coords.src, None)
+
+                else:
+                    #if there is no unit at the destination, move the source to that coordinate
+                    self.set(coords.dst,self.get(coords.src))
+                    self.set(coords.src,None)
             return (True,"")
         return (False,"invalid move")
+    
+
+    def unit_self_destruct(self, coords: CoordPair) -> str:
+        """Allow a unit to self destruct"""
+        unit = self.get(coords.src)
+
+        if unit is not None:
+            #Damage health of 4 diagonal surrounding units from the self-destructing unit
+            diagonal_units = list(coords.src.iter_range(1))
+            for j in diagonal_units:
+                units_diag = self.get(j)
+                if units_diag is not None:
+                    units_diag.mod_health(-2)
+
+            unit.self_destruct()
+            self.set(coords.src, None)
+            return "Self-destruction occurred."
+        return "Self-destruction failed."
+
 
     def next_turn(self):
         """Transitions game to the next turn."""
@@ -447,7 +493,7 @@ class Game:
                 return coords
             else:
                 print('Invalid coordinates! Try again.')
-    
+
     def human_turn(self):
         """Human player plays a move (or get via broker)."""
         if self.options.broker is not None:
@@ -473,6 +519,29 @@ class Game:
                     break
                 else:
                     print("The move is not valid! Try again.")
+    
+    #def human_turn(self):
+        """Human player plays a move (or get via broker)."""
+        """if self.options.broker is not None:
+            print("Getting next move with auto-retry from game broker...")
+            while True:
+                mv = self.get_move_from_broker()
+                if mv is not None:
+                    result = self.unit_self_destruct(mv) if mv.src == mv.dst else self.perform_move(mv)
+                    print(f"Broker {self.next_player.name}: {result}")
+                    if isinstance(result, str) and "invalid" not in result.lower():
+                        self.next_turn()
+                        break
+                sleep(0.1)
+        else:
+            while True:
+                mv = self.read_move()
+                result = self.unit_self_destruct(mv) if mv.src == mv.dst else self.perform_move(mv)
+                print(f"Player {self.next_player.name}: {result}")
+                if isinstance(result, str) and "invalid" not in result.lower():
+                    self.next_turn()
+                    break"""
+
 
     def computer_turn(self) -> CoordPair | None:
         """Computer plays a move."""
