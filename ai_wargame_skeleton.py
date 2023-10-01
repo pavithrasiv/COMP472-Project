@@ -428,6 +428,7 @@ class Game:
                     #if there is no unit at the destination, move the source to that coordinate
                     self.set(coords.dst,self.get(coords.src))
                     self.set(coords.src,None)
+                    logging.info(f'move from {coords.src.to_string()} to {coords.dst.to_string()}\n')
             return (True,"")
         return (False,"invalid move")
     
