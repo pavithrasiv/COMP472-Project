@@ -342,8 +342,7 @@ class Game:
             return True
 
         #check unit type
-        move = coords.src
-        adjacent_coords = list(move.iter_adjacent())
+        adjacent_coords = list(coords.src.iter_adjacent())
 
         row_decrement = adjacent_coords[0]
         column_decrement = adjacent_coords[1]
@@ -355,10 +354,10 @@ class Game:
             if self.in_combat(coords) is True:
                 return False
             if unit.player is Player.Attacker:
-                if move is row_increment or move is column_increment:
+                if coords.dst.row >= row_increment.row or coords.dst.col >= column_increment.col or coords.dst.row < row_decrement.row or coords.dst.col < column_decrement.col:
                     return False
             if unit.player is Player.Defender:
-                if move is row_decrement or move is column_decrement:
+                if coords.dst.row <= row_decrement.row or coords.dst.col <= column_decrement.col or coords.dst.row > row_increment.row or coords.dst.col > column_increment.col:
                     return False    
         return True
     
