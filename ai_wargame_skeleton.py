@@ -14,7 +14,6 @@ import logging
 MAX_HEURISTIC_SCORE = 2000000000
 MIN_HEURISTIC_SCORE = -2000000000
 
-logging.basicConfig(filename='game_log.txt', filemode='w', level=logging.INFO)
 
 class UnitType(Enum):
     """Every unit type."""
@@ -230,9 +229,11 @@ class Options:
     max_time : float | None = 5.0
     game_type : GameType = GameType.AttackerVsDefender
     alpha_beta : bool = True
-    max_turns : int | None = 100
+    max_turns : int | None = 2
     randomize_moves : bool = True
     broker : str | None = None
+
+    logging.basicConfig(filename=f'gameTrace-{alpha_beta}-{max_time}-{max_turns}.txt', filemode='w', level=logging.INFO)
 
 ##############################################################################################################
 
@@ -274,7 +275,7 @@ class Game:
         self.set(Coord(md-1,md-1),Unit(player=Player.Attacker,type=UnitType.Firewall))
 
         logging.info(f'---GAME PARAMETERS---\n')
-        logging.info(f'Time Value: {self.options.max_time}\n')
+        logging.info(f'Timeout Value: {self.options.max_time} s\n')
         logging.info(f'Maximum number of turns: {self.options.max_turns}\n')
         logging.info("\n")
         logging.info(f'---Initial Configuration of the Game---\n')
@@ -537,29 +538,6 @@ class Game:
                     break
                 else:
                     print("The move is not valid! Try again.")
-    
-    #def human_turn(self):
-        """Human player plays a move (or get via broker)."""
-        """if self.options.broker is not None:
-            print("Getting next move with auto-retry from game broker...")
-            while True:
-                mv = self.get_move_from_broker()
-                if mv is not None:
-                    result = self.unit_self_destruct(mv) if mv.src == mv.dst else self.perform_move(mv)
-                    print(f"Broker {self.next_player.name}: {result}")
-                    if isinstance(result, str) and "invalid" not in result.lower():
-                        self.next_turn()
-                        break
-                sleep(0.1)
-        else:
-            while True:
-                mv = self.read_move()
-                result = self.unit_self_destruct(mv) if mv.src == mv.dst else self.perform_move(mv)
-                print(f"Player {self.next_player.name}: {result}")
-                if isinstance(result, str) and "invalid" not in result.lower():
-                    self.next_turn()
-                    break"""
-
 
     def computer_turn(self) -> CoordPair | None:
         """Computer plays a move."""
@@ -729,6 +707,8 @@ def main():
         winner = game.has_winner()
         if winner is not None:
             print(f"{winner.name} wins!")
+            logging.info(f'{winner.name} wins in {game.turns_played} turns\n')
+
             break
         if game.options.game_type == GameType.AttackerVsDefender:
             game.human_turn()
