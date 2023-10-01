@@ -1,8 +1,11 @@
 # COMP472-Project
 
 ## Students
+
 Michael Dickson - 40003518
+
 Pavithra Sivagnanasuntharam - 40117356
+
 Asha Islam - 40051511
 
 ## How to play the game
