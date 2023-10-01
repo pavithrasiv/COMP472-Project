@@ -106,6 +106,7 @@ class Unit:
         """Reduce health of unit to self-destruct"""
         self.health = 0
 
+
 ##############################################################################################################
 
 @dataclass(slots=True)
@@ -344,6 +345,7 @@ class Game:
         if not empty:
             return False"""
         
+        
         if self.get(coords.dst) is None or self.get(coords.dst).player != self.next_player:
             empty = self.is_empty(coords.dst)
         
@@ -360,6 +362,9 @@ class Game:
         column_increment = adjacent_coords[3]
 
         unit = self.get(coords.src)
+        if self.in_repair(coords) is True: 
+            return True 
+
         if empty and unit.type != UnitType.Virus and unit.type != UnitType.Tech:
             if self.in_combat(coords) is True:
                 return False
@@ -367,10 +372,25 @@ class Game:
                 if coords.dst.row >= row_increment.row or coords.dst.col >= column_increment.col or coords.dst.row < row_decrement.row or coords.dst.col < column_decrement.col:
                     return False
             if unit.player is Player.Defender:
+
                 if coords.dst.row <= row_decrement.row or coords.dst.col <= column_decrement.col or coords.dst.row > row_increment.row or coords.dst.col > column_increment.col:
                     return False    
         return True
     
+    def in_repair(self, coords):
+        #check the destination and and if in the same team
+        if self.is_empty(coords.dst):
+            return False 
+        else:
+            unit = self.get(coords.dst)
+            if unit.player is self.next_player:
+                return True
+            else: 
+                return False
+            
+        
+
+
     def in_combat(self, coords) -> bool:
         """ Checks adjacent cells for enemy units. If present, unit is in combat"""
         adjacent_coords = list(coords.src.iter_adjacent())
@@ -411,6 +431,10 @@ class Game:
         """Validate and perform a move expressed as a CoordPair. TODO: WRITE MISSING CODE!!!"""
         if self.is_valid_move(coords):
 
+            if self.in_repair(coords):
+            #check if its not the next player, want to repair
+                repair = self.unit_repair(coords)
+
             #check that the source unit is not empty
             if self.get(coords.src) is not None:
                 #check that the target unit is not empty
@@ -440,6 +464,32 @@ class Game:
             return (True,"")
         return (False,"invalid move")
     
+
+    #repare when it is going to be an issue
+    def unit_repair(self, coords: CoordPair) -> str:
+         """Allow a unit to self repair"""
+         unit = self.get(coords.src)
+         unit_repairing = self.get(coords.src).repair_amount(self.get(coords.dst))
+
+         if unit is not None:
+             
+            #repair amount based on the repair values 
+            #repair_amount = unit.repair_amount(units_repair)
+            #if the unit has 0 lives, it is dead 
+            if unit_repairing == 0: 
+                return "Invalid repair, no lives"
+                #if the unit has all their lives, doesnt need to be repaired 
+            elif unit_repairing == 9: 
+                return "Invalid repair, has all their lives"
+            else:
+                #want to set the repair amount to the destination unit
+                self.get(coords.dst).mod_health(+unit_repairing)
+             #self.set(coords.src, None)
+            return "self-repaired successful"
+         return "Self-repaired failed."
+
+
+
 
     def unit_self_destruct(self, coords: CoordPair) -> str:
         """Allow a unit to self destruct"""
