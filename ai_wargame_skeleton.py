@@ -230,7 +230,7 @@ class Options:
     max_time : float | None = 5.0
     game_type : GameType = GameType.AttackerVsDefender
     alpha_beta : bool = True
-    max_turns : int | None = 2
+    max_turns : int | None = 50
     randomize_moves : bool = True
     broker : str | None = None
 
@@ -435,25 +435,30 @@ class Game:
             if self.in_repair(coords):
             #check if its not the next player, want to repair
                 repair = self.unit_repair(coords)
+                logging.info('---Action Information---')
+                logging.info(f'Turn #{self.turns_played+1}')
+                logging.info(f'Unit at {coords.src.to_string()} repaired unit at {coords.dst.to_string()} by {self.next_player}\n')
 
             #check that the source unit is not empty
             if self.get(coords.src) is not None:
                 #check that the target unit is not empty
                 if self.get(coords.dst) is not None:
-                    damage = self.get(coords.src).damage_amount(self.get(coords.dst))
-                    #Decrease health of the source unit according to the damage table
-                    self.get(coords.src).mod_health(-damage)
-                    #Decrease health of the target unit according to the damage table
-                    self.get(coords.dst).mod_health(-damage)
-                    logging.info('---Action Information---\n')
-                    logging.info(f'Turn #{self.turns_played+1}')
-                    logging.info(f'Unit at {coords.src.to_string()} attacked unit at {coords.dst.to_string()} by {self.next_player}\n')
-                    if coords.src == coords.dst:
-                        self.unit_self_destruct(coords)
-                        self.set(coords.src, None)
+                    unit = self.get(coords.dst)
+                    if unit.player is not self.next_player:
+                        damage = self.get(coords.src).damage_amount(self.get(coords.dst))
+                        #Decrease health of the source unit according to the damage table
+                        self.get(coords.src).mod_health(-damage)
+                        #Decrease health of the target unit according to the damage table
+                        self.get(coords.dst).mod_health(-damage)
                         logging.info('---Action Information---\n')
                         logging.info(f'Turn #{self.turns_played+1}')
-                        logging.info(f'Unit at {coords.src.to_string()} self destructed by {self.next_player}\n')
+                        logging.info(f'Unit at {coords.src.to_string()} attacked unit at {coords.dst.to_string()} by {self.next_player}\n')
+                        if coords.src == coords.dst:
+                            self.unit_self_destruct(coords)
+                            self.set(coords.src, None)
+                            logging.info('---Action Information---\n')
+                            logging.info(f'Turn #{self.turns_played+1}')
+                            logging.info(f'Unit at {coords.src.to_string()} self destructed by {self.next_player}\n')
 
                 else:
                     #if there is no unit at the destination, move the source to that coordinate
