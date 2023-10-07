@@ -453,12 +453,12 @@ class Game:
                         logging.info('---Action Information---\n')
                         logging.info(f'Turn #{self.turns_played+1}')
                         logging.info(f'Unit at {coords.src.to_string()} attacked unit at {coords.dst.to_string()} by {self.next_player}\n')
-                        if coords.src == coords.dst:
-                            self.unit_self_destruct(coords)
-                            self.set(coords.src, None)
-                            logging.info('---Action Information---\n')
-                            logging.info(f'Turn #{self.turns_played+1}')
-                            logging.info(f'Unit at {coords.src.to_string()} self destructed by {self.next_player}\n')
+                    elif coords.src == coords.dst:
+                        self.unit_self_destruct(coords)
+                        self.set(coords.src, None)
+                        logging.info('---Action Information---\n')
+                        logging.info(f'Turn #{self.turns_played+1}')
+                        logging.info(f'Unit at {coords.src.to_string()} self destructed by {self.next_player}\n')
 
                 else:
                     #if there is no unit at the destination, move the source to that coordinate
