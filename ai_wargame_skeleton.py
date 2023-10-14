@@ -514,6 +514,25 @@ class Game:
             return "Self-destruction occurred."
         return "Self-destruction failed."
 
+    def heuristic_e1(self) -> int:
+        """ Heuristic which uses the units' current health to assess the game state """
+        attackerHealth, defenderHealth = 0
+
+        for coord in CoordPair.from_dim(self.options.dim).iter_rectangle():
+            unit = self.get(coord)
+            if unit is not None:
+                if unit.type != UnitType.AI:
+                    if unit.player is Player.Attacker:
+                        attackerHealth += unit.health * 3
+                    elif unit.player is Player.Defender:
+                        defenderHealth += unit.health * 3
+                else:
+                    if unit.player is Player.Attacker:
+                        attackerHealth += unit.health * 9999
+                    elif unit.player is Player.Defender:
+                        defenderHealth += unit.health * 9999
+        e1 = attackerHealth - defenderHealth
+        return e1
 
     def next_turn(self):
         """Transitions game to the next turn."""
