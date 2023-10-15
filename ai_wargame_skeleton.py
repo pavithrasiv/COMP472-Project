@@ -4,7 +4,9 @@ import copy
 from datetime import datetime
 from enum import Enum
 from dataclasses import dataclass, field
+from os import EX_UNAVAILABLE
 from time import sleep
+from tkinter import CURRENT
 from typing import Tuple, TypeVar, Type, Iterable, ClassVar
 import random
 import requests
@@ -469,7 +471,6 @@ class Game:
                     logging.info(f'move from {coords.src.to_string()} to {coords.dst.to_string()} by {self.next_player}\n')
             return (True,"")
         return (False,"invalid move")
-    
 
     #repare when it is going to be an issue
     def unit_repair(self, coords: CoordPair) -> str:
@@ -493,9 +494,6 @@ class Game:
              #self.set(coords.src, None)
             return "self-repaired successful"
          return "Self-repaired failed."
-
-
-
 
     def unit_self_destruct(self, coords: CoordPair) -> str:
         """Allow a unit to self destruct"""
@@ -533,6 +531,73 @@ class Game:
                         defenderHealth += unit.health * 9999
         e1 = attackerHealth - defenderHealth
         return e1
+
+    def minimax_withab(self, depth, max_player, alpha = -float('inf'), beta = float('inf'), current_depth = 0):
+        """ Function for determining best move for AI to make using minimax algorithm and alpha beta pruning """
+        if depth == 0 or self.has_winner is not None:
+            return self.heuristic_e1, None, current_depth
+
+        if max_player:
+            max_eval = -float('inf')
+            best_move = None
+            total_depth = current_depth
+            for move in self.move_candidates():
+                self_clone = self.clone()
+                self_clone.perform_move(move)
+                eval, _ = self_clone.minimax_withab(depth - 1, False, alpha, beta, current_depth + 1)
+                if eval > max_eval:
+                    max_eval = eval
+                    best_move = move
+                alpha = max(alpha, eval)
+                if beta <= alpha:
+                    break # Beta cutoff
+            return max_eval, best_move, total_depth / len(self.move_candidates)
+        else:
+            min_eval = float('inf')
+            best_move = None
+            total_depth = current_depth
+            for move in self.move_candidates():
+                self_clone = self.clone()
+                self_clone.perform_move(move)
+                eval, _ = self_clone.minimax_withab(depth - 1, True, alpha, beta, current_depth + 1)
+                if eval < min_eval:
+                    min_eval = eval
+                    best_move = move
+                beta = min(beta, eval)
+                if beta <= alpha:
+                    break # Alpha cutoff
+            return min_eval, best_move, total_depth / len(self.move_candidates)
+
+    def minimax(self, depth, max_player, current_depth = 0):
+        if depth == 0 or self.has_winner() is not None:
+            return self.heuristic_e1, None, current_depth
+
+        if max_player:
+            max_eval = -float('inf')
+            best_move = None
+            total_depth = current_depth
+            for move in self.move_candidates:
+                self_clone = self.clone
+                self_clone.perform_move(move)
+                eval, _ = self_clone.minimax(depth - 1, False, current_depth + 1)
+                if eval > max_eval:
+                    max_eval = eval
+                    best_move = move
+            return max_eval, best_move, total_depth / len(self.move_candidates)
+        else:
+            min_eval = float('inf')
+            best_move = None
+            total_depth = current_depth
+            for move in self.move_candidates:
+                self_clone = self.clone
+                self_clone.perform_move(move)
+                eval, _ = self_clone.minimax(depth - 1, True, current_depth + 1)
+                if eval < min_eval:
+                    min_eval = eval
+                    best_move = move
+            return min_eval, best_move, total_depth / len(self.move_candidates)
+
+
 
     def next_turn(self):
         """Transitions game to the next turn."""
@@ -671,7 +736,10 @@ class Game:
     def suggest_move(self) -> CoordPair | None:
         """Suggest the next move using minimax alpha beta. TODO: REPLACE RANDOM_MOVE WITH PROPER GAME LOGIC!!!"""
         start_time = datetime.now()
-        (score, move, avg_depth) = self.random_move()
+        if self.options.alpha_beta:
+            (score, move, avg_depth) = self.minimax_withab(depth = 3, max_player=True)
+        else:
+            (score, move, avg_depth) = self.minimax(depth = 3, max_player=True)
         elapsed_seconds = (datetime.now() - start_time).total_seconds()
         self.stats.total_seconds += elapsed_seconds
         print(f"Heuristic score: {score}")
