@@ -512,12 +512,38 @@ class Game:
     
 
     # Heuristic function e0 (given)
-    def heuristic_e0(self, coords: CoordPair) -> int:
-        unit = self.get(coords.src)
-        if unit.player is Player.Attacker:
-            Vp1, Tp1, Fp1, Pp1, AIp1 = 0, 0, 0, 0, 0
-        if unit.player is Player.Defender:
-            Vp2, Tp2, Fp2, Pp2, AIp2 = 0, 0, 0, 0, 0
+    # Heuristic that uses the number of unit for each type
+    def heuristic_e0(self) -> int:
+        Vp1, Tp1, Fp1, Pp1, AIp1 = 0, 0, 0, 0, 0
+        Vp2, Tp2, Fp2, Pp2, AIp2 = 0, 0, 0, 0, 0
+        
+        for coord in CoordPair.from_dim(self.options.dim).iter_rectangle():
+                unit = self.get(coord)
+                if unit is not None:
+                    if unit.player is Player.Attacker:
+                        if unit.type == UnitType.Virus:
+                            Vp1 += 1
+                        if unit.type == UnitType.Tech:
+                            Tp1 += 1
+                        if unit.type == UnitType.Firewall:
+                            Fp1 += 1
+                        if unit.type == UnitType.Program:
+                            Pp1 += 1
+                        if unit.type == UnitType.AI:
+                            AIp1 += 1
+
+                    elif unit.player is Player.Defender:
+                        if unit.type == UnitType.Virus:
+                            Vp2 += 1
+                        if unit.type == UnitType.Tech:
+                            Tp2 += 1
+                        if unit.type == UnitType.Firewall:
+                            Fp2 += 1
+                        if unit.type == UnitType.Program:
+                            Pp2 += 1
+                        if unit.type == UnitType.AI:
+                            AIp2 += 1
+                        
 
         e0 = (3*Vp1 + 3*Tp1 + 3*Fp1 + 3*Pp1 + 9999*AIp1) - (3*Vp2 + 3*Tp2 + 3*Fp2 + 3*Pp2 + 9999*AIp2)
 
