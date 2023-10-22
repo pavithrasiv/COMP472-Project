@@ -573,6 +573,7 @@ class Game:
 
     def minimax_withab(self, depth, max_player, alpha = -float('inf'), beta = float('inf'), current_depth = 0):
         """ Function for determining best move for AI to make using minimax algorithm and alpha beta pruning """
+        start_time = datetime.now()
         if depth == 0 or self.has_winner() is not None:
             return self.heuristic_e1, None, current_depth
 
@@ -582,8 +583,15 @@ class Game:
             total_depth = current_depth
             count = 0
             for move in self.move_candidates():
+                elapsed_seconds = (datetime.now() - start_time).total_seconds()
+                # Check if there is still time to run algorithm
+                if elapsed_seconds > self.options.max_time:
+                    print("AI ran out of time")
+                    logging.info(f'AI ran out of time')
+                    break
                 self_clone = self.clone()
                 self_clone.perform_move(move, True)
+                # Check which heuristic to evaluate with
                 if self.options.heuristic == 0:
                     eval = self_clone.heuristic_e0()
                 if self.options.heuristic == 1:
@@ -604,6 +612,12 @@ class Game:
             total_depth = current_depth
             count = 0
             for move in self.move_candidates():
+                elapsed_seconds = (datetime.now() - start_time).total_seconds()
+                # Check if there is still time to run algorithm
+                if elapsed_seconds > self.options.max_time:
+                    print("AI ran out of time")
+                    logging.info(f'AI ran out of time')
+                    break
                 self_clone = self.clone()
                 self_clone.perform_move(move, True)
                 if self.options.heuristic == 0:
@@ -622,6 +636,8 @@ class Game:
             return min_eval, best_move, count
 
     def minimax(self, depth, max_player, current_depth = 0):
+        """ Function for determining best move for AI to make using minimax algoritm """
+        start_time = datetime.now()
         if depth == 0 or self.has_winner() is not None:
             return self.heuristic_e1, None, current_depth
 
@@ -631,6 +647,12 @@ class Game:
             total_depth = 0
             count = 0
             for move in self.move_candidates():
+                elapsed_seconds = (datetime.now() - start_time).total_seconds()
+                # Check if there is still time to run algorithm
+                if elapsed_seconds > self.options.max_time:
+                    print("AI ran out of time")
+                    logging.info(f'AI ran out of time')
+                    break
                 self_clone = self.clone()
                 self_clone.perform_move(move, True)
                 if self.options.heuristic == 0:
@@ -651,6 +673,12 @@ class Game:
             total_depth = current_depth
             count = 0
             for move in self.move_candidates():
+                elapsed_seconds = (datetime.now() - start_time).total_seconds()
+                # Check if there is still time to run algorithm
+                if elapsed_seconds > self.options.max_time:
+                    print("AI ran out of time")
+                    logging.info(f'AI ran out of time')
+                    break
                 self_clone = self.clone()
                 self_clone.perform_move(move, True)
                 if self.options.heuristic == 0:
@@ -806,14 +834,14 @@ class Game:
         start_time = datetime.now()
         if self.options.alpha_beta:
             if self.next_player is Player.Attacker:
-                (score, move, evals) = self.minimax_withab(depth = 3, max_player=True)
+                (score, move, evals) = self.minimax_withab(depth = self.options.max_depth, max_player=True)
             else:
-                (score, move, evals) = self.minimax_withab(depth = 3, max_player=False)
+                (score, move, evals) = self.minimax_withab(depth = self.options.max_depth, max_player=False)
         else:
             if self.next_player is Player.Attacker:
-                (score, move, evals) = self.minimax(depth = 3, max_player=True)
+                (score, move, evals) = self.minimax(depth = self.options.max_depth, max_player=True)
             else:
-                (score, move, evals) = self.minimax(depth = 3, max_player=False)
+                (score, move, evals) = self.minimax(depth = self.options.max_depth, max_player=False)
         elapsed_seconds = (datetime.now() - start_time).total_seconds()
         self.stats.total_seconds += elapsed_seconds
         print(f"Heuristic score: {score}")
@@ -985,6 +1013,11 @@ def main():
                 break
             else:
                 print("Invalid! Please enter a valid input.")
+
+        while True:
+            depth = (input("Enter the depth for the minimax algorithms: "))
+            options.max_depth = depth
+            break
 
     logging.basicConfig(filename=f'gameTrace-{options.alpha_beta}-{options.max_time}-{options.max_turns}.txt', filemode='w', level=logging.INFO)
 
