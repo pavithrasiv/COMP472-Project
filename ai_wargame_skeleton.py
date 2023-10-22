@@ -314,6 +314,36 @@ class Game:
         if self.is_valid_coord(coord):
             self.board[coord.row][coord.col] = unit
 
+    def heuristic_e2 (self) -> int:
+        # implementation of heuristic to check the defense stability of the program 
+        # e(n) = (health of the F and P of Player 1) - (health of the F and P of Player 2)
+        attackerHealth, defenderHealth = 0
+        unit = self.get(coord)
+
+        for coord in CoordPair.from_dim(self.options.dim).iter_rectangle():
+            if unit.type != UnitType.AI:
+                if unit.type != UnitType.Virus:
+                    if unit.type != UnitType.Tech:
+                        # attacker
+                        if unit.player is Player.Attacker:
+                            # add firewall health of attacker
+                            if unit.type is UnitType.Firewall:
+                                attackerHealth = attackerHealth + unit.health 
+                            # add program health of attacker
+                            elif unit.type is UnitType.Program:
+                                attackerHealth = attackerHealth + unit.health 
+                        # defender 
+                        elif unit.player is Player.Defender:
+                            # add firewall health of defender
+                            if unit.type is UnitType.Firewall:
+                                defenderHealth = defenderHealth +  unit.health
+                            # add program health of defender
+                            elif unit.type is UnitType.Program:
+                                defenderHealth = defenderHealth +  unit.health
+        #perform the heuristics 
+        e2 = attackerHealth - defenderHealth
+        return e2
+
     def remove_dead(self, coord: Coord):
         """Remove unit at Coord if dead."""
         unit = self.get(coord)
