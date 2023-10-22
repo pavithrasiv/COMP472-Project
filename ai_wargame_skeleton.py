@@ -227,10 +227,10 @@ class Options:
     dim: int = 5
     max_depth : int | None = 4
     min_depth : int | None = 2
-    max_time : float | None = 5.0
-    game_type : GameType = GameType.AttackerVsDefender
-    alpha_beta : bool = True
-    max_turns : int | None = 50
+    max_time : float | None = None
+    game_type : GameType = None
+    alpha_beta : bool = None
+    max_turns : int | None = None
     randomize_moves : bool = True
     broker : str | None = None
 
@@ -786,6 +786,59 @@ def main():
 
     # create a new game
     game = Game(options=options)
+
+    # User input of the maximum number of turns
+    # Prompt the user to input a value until a valid integer is written 
+    while True:
+        try:
+            max_turns = int(input("Enter the maximum number of turns: "))
+            options.max_turns = max_turns
+            break
+        # Output error if the input value is not an integer
+        except ValueError:
+            print("Invalid! Please enter a valid integer.")
+
+    # User input of the maximum allowed time for the AI to return a move
+    # Prompt the user to input a value until a valid float is written 
+    while True:
+        try:
+            max_time = float(input("Enter the maximum allowed time for the AI to return a move: "))
+            options.max_time = max_time
+            break
+        # Output error if the input value is not a float
+        except ValueError:
+            print("Invalid! Please enter a valid float.")
+
+    # User input (TRUE or FALSE) for use of either minimax (FALSE) or alpha-beta (TRUE)
+    # Prompt the user to input either true or false 
+    while True:
+        alpha_beta = (input("Enter false (minimax) or true (alpha-beta): "))
+        if alpha_beta in ["true", "false"]:
+            options.alpha_beta = alpha_beta == "true"
+            break
+        # Output error if the input value is not from the allowed inputs
+        else:
+            print("Invalid! Please enter either true or false.")
+
+    # User input for play mode
+    # Prompt the user to input either attacker (H-AI), defender (AI-H), manual (H-H), or ai (AI-AI)
+    while True:
+        game_type = (input("Enter enter the play mode (attacker, defender, manual, or ai): "))
+        if game_type == "attacker":
+            options.game_type = GameType.AttackerVsComp
+            break
+        elif game_type == "defender":
+            options.game_type = GameType.CompVsDefender
+            break
+        elif game_type == "manual":
+            options.game_type = GameType.AttackerVsDefender
+            break
+        elif game_type == "ai":
+            options.game_type = GameType.CompVsComp
+            break
+        # Output error if the input value is not from the allowed inputs
+        else:
+            print("Invalid! Please enter a valid input.")
 
     # the main game loop
     while True:
