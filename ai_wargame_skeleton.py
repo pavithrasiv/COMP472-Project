@@ -234,8 +234,7 @@ class Options:
     max_turns : int | None = None
     randomize_moves : bool = True
     broker : str | None = None
-
-    logging.basicConfig(filename=f'gameTrace-{alpha_beta}-{max_time}-{max_turns}.txt', filemode='w', level=logging.INFO)
+    heuristic: int | None = 0
 
 ##############################################################################################################
 
@@ -277,13 +276,6 @@ class Game:
         self.set(Coord(md-2,md),Unit(player=Player.Attacker,type=UnitType.Program))
         self.set(Coord(md,md-2),Unit(player=Player.Attacker,type=UnitType.Program))
         self.set(Coord(md-1,md-1),Unit(player=Player.Attacker,type=UnitType.Firewall))
-
-        logging.info(f'---GAME PARAMETERS---\n')
-        logging.info(f'Timeout Value: {self.options.max_time} s\n')
-        logging.info(f'Maximum number of turns: {self.options.max_turns}\n')
-        logging.info("\n")
-        logging.info(f'---Initial Configuration of the Game---\n')
-        logging.info("\n")
 
         self.total_evals = 0
 
@@ -592,7 +584,12 @@ class Game:
             for move in self.move_candidates():
                 self_clone = self.clone()
                 self_clone.perform_move(move, True)
-                eval = self_clone.heuristic_e1()
+                if self.options.heuristic == 0:
+                    eval = self_clone.heuristic_e0()
+                if self.options.heuristic == 1:
+                    eval = self_clone.heuristic_e1()
+                if self.options.heuristic == 2:
+                    eval = self_clone.heuristic_e2()
                 if eval > max_eval:
                     max_eval = eval
                     best_move = move
@@ -609,7 +606,12 @@ class Game:
             for move in self.move_candidates():
                 self_clone = self.clone()
                 self_clone.perform_move(move, True)
-                eval = self_clone.heuristic_e1()
+                if self.options.heuristic == 0:
+                    eval = self_clone.heuristic_e0()
+                if self.options.heuristic == 1:
+                    eval = self_clone.heuristic_e1()
+                if self.options.heuristic == 2:
+                    eval = self_clone.heuristic_e2()
                 if eval < min_eval:
                     min_eval = eval
                     best_move = move
@@ -631,7 +633,12 @@ class Game:
             for move in self.move_candidates():
                 self_clone = self.clone()
                 self_clone.perform_move(move, True)
-                eval = self_clone.heuristic_e1()
+                if self.options.heuristic == 0:
+                    eval = self_clone.heuristic_e0()
+                if self.options.heuristic == 1:
+                    eval = self_clone.heuristic_e1()
+                if self.options.heuristic == 2:
+                    eval = self_clone.heuristic_e2()
                 if eval > max_eval:
                     max_eval = eval
                     best_move = move
@@ -646,7 +653,12 @@ class Game:
             for move in self.move_candidates():
                 self_clone = self.clone()
                 self_clone.perform_move(move, True)
-                eval = self_clone.heuristic_e1()
+                if self.options.heuristic == 0:
+                    eval = self_clone.heuristic_e0()
+                if self.options.heuristic == 1:
+                    eval = self_clone.heuristic_e1()
+                if self.options.heuristic == 2:
+                    eval = self_clone.heuristic_e2()
                 if eval < min_eval:
                     min_eval = eval
                     best_move = move
@@ -957,6 +969,31 @@ def main():
         # Output error if the input value is not from the allowed inputs
         else:
             print("Invalid! Please enter a valid input.")
+    
+    # Select which heuristic to use
+    if options.game_type is not GameType.AttackerVsDefender:
+        while True:
+            heuristic = (input("Enter which heuristic to use (e0, e1 or e2): "))
+            if heuristic == "e0":
+                options.heuristic = 0
+                break
+            elif heuristic == "e1":
+                options.heuristic = 1
+                break
+            elif heuristic == "e2":
+                options.heuristic = 2
+                break
+            else:
+                print("Invalid! Please enter a valid input.")
+
+    logging.basicConfig(filename=f'gameTrace-{options.alpha_beta}-{options.max_time}-{options.max_turns}.txt', filemode='w', level=logging.INFO)
+
+    logging.info(f'---GAME PARAMETERS---\n')
+    logging.info(f'Timeout Value: {options.max_time} s\n')
+    logging.info(f'Maximum number of turns: {options.max_turns}\n')
+    logging.info("\n")
+    logging.info(f'---Initial Configuration of the Game---\n')
+    logging.info("\n")
 
     # the main game loop
     while True:
