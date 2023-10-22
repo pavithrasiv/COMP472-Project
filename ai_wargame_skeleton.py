@@ -1059,6 +1059,21 @@ def main():
     logging.info(f'---GAME PARAMETERS---\n')
     logging.info(f'Timeout Value: {options.max_time} s\n')
     logging.info(f'Maximum number of turns: {options.max_turns}\n')
+    logging.info(f'Alpha-beta status: {options.alpha_beta}\n')
+
+    if options.game_type == GameType.AttackerVsComp:
+        logging.info(f'Play Mode: player 1 = H & player 2 = AI\n')
+    if options.game_type == GameType.CompVsDefender:
+        logging.info(f'Play Mode: player 1 = AI & player 2 = H\n')
+    if options.game_type == GameType.AttackerVsDefender:
+        logging.info(f'Play Mode: player 1 = H & player 2 = H\n')
+    if options.game_type == GameType.CompVsComp:
+        logging.info(f'Play Mode: player 1 = AI & player 2 = AI\n')
+    # log the heuristic used if a player is an AI
+    if options.game_type != GameType.AttackerVsDefender and options.heuristic is not None:
+        logging.info(f'Heuristic used: {options.heuristic}')
+    else:
+        logging.info(f'No heuristics used')
     logging.info("\n")
     logging.info(f'---Initial Configuration of the Game---\n')
     logging.info("\n")
