@@ -1,0 +1,2268 @@
+INFO:root:---GAME PARAMETERS---
+
+INFO:root:Timeout Value: 5.0 s
+
+INFO:root:Maximum number of turns: 50
+
+INFO:root:
+
+INFO:root:---Initial Configuration of the Game---
+
+INFO:root:
+
+INFO:root:Next player: Attacker
+Turns played: 0
+
+    0   1   2   3   4  
+A: dA9 dT9 dF9  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .  aP9 
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #1
+INFO:root:move from C4 to B4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #1
+INFO:root:move from C4 to C3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #1
+INFO:root:move from D3 to C3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #1
+INFO:root:move from D3 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #1
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #1
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #1
+INFO:root:move from C4 to B4 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 1
+
+    0   1   2   3   4  
+A: dA9 dT9 dF9  .   .  
+B: dT9 dP9  .   .  aP9 
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #2
+INFO:root:move from A2 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #2
+INFO:root:move from A2 to A3 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #2
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #2
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #2
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #2
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 2
+
+    0   1   2   3   4  
+A: dA9 dT9 dF9  .   .  
+B: dT9 dP9  .   .  aP9 
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #3
+INFO:root:move from B4 to A4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #3
+INFO:root:move from B4 to B3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #3
+INFO:root:move from D3 to C3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #3
+INFO:root:move from D3 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #3
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #3
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #3
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #3
+INFO:root:move from B4 to A4 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 3
+
+    0   1   2   3   4  
+A: dA9 dT9 dF9  .  aP9 
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #4
+INFO:root:move from A2 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #4
+INFO:root:move from A2 to A3 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #4
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #4
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #4
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #4
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 4
+
+    0   1   2   3   4  
+A: dA9 dT9 dF9  .  aP9 
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #5
+INFO:root:move from A4 to A3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #5
+INFO:root:move from D3 to C3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #5
+INFO:root:move from D3 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #5
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #5
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #5
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #5
+INFO:root:move from A4 to A3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 5
+
+    0   1   2   3   4  
+A: dA9 dT9 dF9 aP9  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #6
+INFO:root:Unit at A2 attacked unit at A3 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #6
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #6
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #6
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #6
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 6
+
+    0   1   2   3   4  
+A: dA9 dT9 dF9 aP9  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #7
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #7
+INFO:root:move from D3 to C3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #7
+INFO:root:move from D3 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #7
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #7
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #7
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #7
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 7
+
+    0   1   2   3   4  
+A: dA9 dT9 dF8 aP8  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+INFO:root:Turn #8
+INFO:root:Unit at A1 repaired unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #8
+INFO:root:Unit at A2 attacked unit at A3 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #8
+INFO:root:Unit at A2 repaired unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #8
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #8
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #8
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #8
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 8
+
+    0   1   2   3   4  
+A: dA9 dT9 dF8 aP8  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #9
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:---Action Information---
+INFO:root:Turn #9
+INFO:root:Unit at A3 repaired unit at A3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #9
+INFO:root:move from D3 to C3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #9
+INFO:root:move from D3 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #9
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #9
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #9
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #9
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 9
+
+    0   1   2   3   4  
+A: dA9 dT9 dF7 aP7  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+INFO:root:Turn #10
+INFO:root:Unit at A1 repaired unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #10
+INFO:root:Unit at A2 attacked unit at A3 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #10
+INFO:root:Unit at A2 repaired unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #10
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #10
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #10
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #10
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 10
+
+    0   1   2   3   4  
+A: dA9 dT9 dF7 aP7  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #11
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:---Action Information---
+INFO:root:Turn #11
+INFO:root:Unit at A3 repaired unit at A3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #11
+INFO:root:move from D3 to C3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #11
+INFO:root:move from D3 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #11
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #11
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #11
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #11
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 11
+
+    0   1   2   3   4  
+A: dA9 dT9 dF6 aP6  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+INFO:root:Turn #12
+INFO:root:Unit at A1 repaired unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #12
+INFO:root:Unit at A2 attacked unit at A3 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #12
+INFO:root:Unit at A2 repaired unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #12
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #12
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #12
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #12
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 12
+
+    0   1   2   3   4  
+A: dA9 dT9 dF6 aP6  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #13
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:---Action Information---
+INFO:root:Turn #13
+INFO:root:Unit at A3 repaired unit at A3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #13
+INFO:root:move from D3 to C3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #13
+INFO:root:move from D3 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #13
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #13
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #13
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #13
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 13
+
+    0   1   2   3   4  
+A: dA9 dT9 dF5 aP5  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+INFO:root:Turn #14
+INFO:root:Unit at A1 repaired unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #14
+INFO:root:Unit at A2 attacked unit at A3 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #14
+INFO:root:Unit at A2 repaired unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #14
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #14
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #14
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #14
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 14
+
+    0   1   2   3   4  
+A: dA9 dT9 dF5 aP5  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #15
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:---Action Information---
+INFO:root:Turn #15
+INFO:root:Unit at A3 repaired unit at A3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #15
+INFO:root:move from D3 to C3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #15
+INFO:root:move from D3 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #15
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #15
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #15
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #15
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 15
+
+    0   1   2   3   4  
+A: dA9 dT9 dF4 aP4  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+INFO:root:Turn #16
+INFO:root:Unit at A1 repaired unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #16
+INFO:root:Unit at A2 attacked unit at A3 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #16
+INFO:root:Unit at A2 repaired unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #16
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #16
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #16
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #16
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 16
+
+    0   1   2   3   4  
+A: dA9 dT9 dF4 aP4  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #17
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:---Action Information---
+INFO:root:Turn #17
+INFO:root:Unit at A3 repaired unit at A3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #17
+INFO:root:move from D3 to C3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #17
+INFO:root:move from D3 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #17
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #17
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #17
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #17
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 17
+
+    0   1   2   3   4  
+A: dA9 dT9 dF3 aP3  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+INFO:root:Turn #18
+INFO:root:Unit at A1 repaired unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #18
+INFO:root:Unit at A2 attacked unit at A3 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #18
+INFO:root:Unit at A2 repaired unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #18
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #18
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #18
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #18
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 18
+
+    0   1   2   3   4  
+A: dA9 dT9 dF3 aP3  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #19
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:---Action Information---
+INFO:root:Turn #19
+INFO:root:Unit at A3 repaired unit at A3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #19
+INFO:root:move from D3 to C3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #19
+INFO:root:move from D3 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #19
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #19
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #19
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #19
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 19
+
+    0   1   2   3   4  
+A: dA9 dT9 dF2 aP2  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+INFO:root:Turn #20
+INFO:root:Unit at A1 repaired unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #20
+INFO:root:Unit at A2 attacked unit at A3 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #20
+INFO:root:Unit at A2 repaired unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #20
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #20
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #20
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #20
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 20
+
+    0   1   2   3   4  
+A: dA9 dT9 dF2 aP2  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #21
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:---Action Information---
+INFO:root:Turn #21
+INFO:root:Unit at A3 repaired unit at A3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #21
+INFO:root:move from D3 to C3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #21
+INFO:root:move from D3 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #21
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #21
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #21
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #21
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 21
+
+    0   1   2   3   4  
+A: dA9 dT9 dF1 aP1  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+INFO:root:Turn #22
+INFO:root:Unit at A1 repaired unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #22
+INFO:root:Unit at A2 attacked unit at A3 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #22
+INFO:root:Unit at A2 repaired unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #22
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #22
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #22
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #22
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 22
+
+    0   1   2   3   4  
+A: dA9 dT9 dF1 aP1  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #23
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:---Action Information---
+INFO:root:Turn #23
+INFO:root:Unit at A3 repaired unit at A3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #23
+INFO:root:move from D3 to C3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #23
+INFO:root:move from D3 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #23
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #23
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #23
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #23
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 23
+
+    0   1   2   3   4  
+A: dA9 dT9  .   .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #24
+INFO:root:move from A1 to A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #24
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #24
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #24
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #24
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 24
+
+    0   1   2   3   4  
+A: dA9 dT9  .   .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #25
+INFO:root:move from D3 to C3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #25
+INFO:root:move from D3 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #25
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #25
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #25
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #25
+INFO:root:move from D3 to C3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 25
+
+    0   1   2   3   4  
+A: dA9 dT9  .   .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .  aF9  .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #26
+INFO:root:move from A1 to A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #26
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #26
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #26
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #26
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 26
+
+    0   1   2   3   4  
+A: dA9 dT9  .   .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .  aF9  .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #27
+INFO:root:move from C3 to B3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #27
+INFO:root:move from C3 to C2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #27
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #27
+INFO:root:move from D4 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #27
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #27
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #27
+INFO:root:move from E3 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #27
+INFO:root:move from C3 to B3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 27
+
+    0   1   2   3   4  
+A: dA9 dT9  .   .   .  
+B: dT9 dP9  .  aF9  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #28
+INFO:root:move from A1 to A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #28
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #28
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #28
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #28
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 28
+
+    0   1   2   3   4  
+A: dA9 dT9  .   .   .  
+B: dT9 dP9  .  aF9  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #29
+INFO:root:move from B3 to A3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #29
+INFO:root:move from B3 to B2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #29
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #29
+INFO:root:move from D4 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #29
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #29
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #29
+INFO:root:move from E3 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #29
+INFO:root:move from B3 to A3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 29
+
+    0   1   2   3   4  
+A: dA9 dT9  .  aF9  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #30
+INFO:root:move from A1 to A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #30
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #30
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #30
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #30
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 30
+
+    0   1   2   3   4  
+A: dA9 dT9  .  aF9  .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #31
+INFO:root:move from A3 to A2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #31
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #31
+INFO:root:move from D4 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #31
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #31
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #31
+INFO:root:move from E3 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #31
+INFO:root:move from A3 to A2 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 31
+
+    0   1   2   3   4  
+A: dA9 dT9 aF9  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #32
+INFO:root:Unit at A1 attacked unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #32
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #32
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #32
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #32
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 32
+
+    0   1   2   3   4  
+A: dA9 dT9 aF9  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #33
+INFO:root:Unit at A2 attacked unit at A1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #33
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #33
+INFO:root:move from D4 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #33
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #33
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #33
+INFO:root:move from E3 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #33
+INFO:root:Unit at A2 attacked unit at A1 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 33
+
+    0   1   2   3   4  
+A: dA9 dT8 aF8  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+INFO:root:Turn #34
+INFO:root:Unit at A0 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #34
+INFO:root:Unit at A1 attacked unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #34
+INFO:root:Unit at A1 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #34
+INFO:root:Unit at B1 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #34
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #34
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #34
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #34
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 34
+
+    0   1   2   3   4  
+A: dA9 dT8 aF8  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #35
+INFO:root:Unit at A2 attacked unit at A1 by Player.Attacker
+
+INFO:root:---Action Information---
+INFO:root:Turn #35
+INFO:root:Unit at A2 repaired unit at A2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #35
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #35
+INFO:root:move from D4 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #35
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #35
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #35
+INFO:root:move from E3 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #35
+INFO:root:Unit at A2 attacked unit at A1 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 35
+
+    0   1   2   3   4  
+A: dA9 dT7 aF7  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+INFO:root:Turn #36
+INFO:root:Unit at A0 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #36
+INFO:root:Unit at A1 attacked unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #36
+INFO:root:Unit at A1 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #36
+INFO:root:Unit at B1 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #36
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #36
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #36
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #36
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 36
+
+    0   1   2   3   4  
+A: dA9 dT7 aF7  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #37
+INFO:root:Unit at A2 attacked unit at A1 by Player.Attacker
+
+INFO:root:---Action Information---
+INFO:root:Turn #37
+INFO:root:Unit at A2 repaired unit at A2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #37
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #37
+INFO:root:move from D4 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #37
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #37
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #37
+INFO:root:move from E3 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #37
+INFO:root:Unit at A2 attacked unit at A1 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 37
+
+    0   1   2   3   4  
+A: dA9 dT6 aF6  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+INFO:root:Turn #38
+INFO:root:Unit at A0 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #38
+INFO:root:Unit at A1 attacked unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #38
+INFO:root:Unit at A1 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #38
+INFO:root:Unit at B1 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #38
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #38
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #38
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #38
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 38
+
+    0   1   2   3   4  
+A: dA9 dT6 aF6  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #39
+INFO:root:Unit at A2 attacked unit at A1 by Player.Attacker
+
+INFO:root:---Action Information---
+INFO:root:Turn #39
+INFO:root:Unit at A2 repaired unit at A2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #39
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #39
+INFO:root:move from D4 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #39
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #39
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #39
+INFO:root:move from E3 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #39
+INFO:root:Unit at A2 attacked unit at A1 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 39
+
+    0   1   2   3   4  
+A: dA9 dT5 aF5  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+INFO:root:Turn #40
+INFO:root:Unit at A0 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #40
+INFO:root:Unit at A1 attacked unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #40
+INFO:root:Unit at A1 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #40
+INFO:root:Unit at B1 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #40
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #40
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #40
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #40
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 40
+
+    0   1   2   3   4  
+A: dA9 dT5 aF5  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #41
+INFO:root:Unit at A2 attacked unit at A1 by Player.Attacker
+
+INFO:root:---Action Information---
+INFO:root:Turn #41
+INFO:root:Unit at A2 repaired unit at A2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #41
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #41
+INFO:root:move from D4 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #41
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #41
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #41
+INFO:root:move from E3 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #41
+INFO:root:Unit at A2 attacked unit at A1 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 41
+
+    0   1   2   3   4  
+A: dA9 dT4 aF4  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+INFO:root:Turn #42
+INFO:root:Unit at A0 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #42
+INFO:root:Unit at A1 attacked unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #42
+INFO:root:Unit at A1 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #42
+INFO:root:Unit at B1 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #42
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #42
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #42
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #42
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 42
+
+    0   1   2   3   4  
+A: dA9 dT4 aF4  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #43
+INFO:root:Unit at A2 attacked unit at A1 by Player.Attacker
+
+INFO:root:---Action Information---
+INFO:root:Turn #43
+INFO:root:Unit at A2 repaired unit at A2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #43
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #43
+INFO:root:move from D4 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #43
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #43
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #43
+INFO:root:move from E3 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #43
+INFO:root:Unit at A2 attacked unit at A1 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 43
+
+    0   1   2   3   4  
+A: dA9 dT3 aF3  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+INFO:root:Turn #44
+INFO:root:Unit at A0 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #44
+INFO:root:Unit at A1 attacked unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #44
+INFO:root:Unit at A1 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #44
+INFO:root:Unit at B1 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #44
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #44
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #44
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #44
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 44
+
+    0   1   2   3   4  
+A: dA9 dT3 aF3  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #45
+INFO:root:Unit at A2 attacked unit at A1 by Player.Attacker
+
+INFO:root:---Action Information---
+INFO:root:Turn #45
+INFO:root:Unit at A2 repaired unit at A2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #45
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #45
+INFO:root:move from D4 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #45
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #45
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #45
+INFO:root:move from E3 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #45
+INFO:root:Unit at A2 attacked unit at A1 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 45
+
+    0   1   2   3   4  
+A: dA9 dT2 aF2  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+INFO:root:Turn #46
+INFO:root:Unit at A0 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #46
+INFO:root:Unit at A1 attacked unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #46
+INFO:root:Unit at A1 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #46
+INFO:root:Unit at B1 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #46
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #46
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #46
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #46
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 46
+
+    0   1   2   3   4  
+A: dA9 dT2 aF2  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #47
+INFO:root:Unit at A2 attacked unit at A1 by Player.Attacker
+
+INFO:root:---Action Information---
+INFO:root:Turn #47
+INFO:root:Unit at A2 repaired unit at A2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #47
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #47
+INFO:root:move from D4 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #47
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #47
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #47
+INFO:root:move from E3 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #47
+INFO:root:Unit at A2 attacked unit at A1 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 47
+
+    0   1   2   3   4  
+A: dA9 dT1 aF1  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+INFO:root:Turn #48
+INFO:root:Unit at A0 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #48
+INFO:root:Unit at A1 attacked unit at A2 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #48
+INFO:root:Unit at A1 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+INFO:root:Turn #48
+INFO:root:Unit at B1 repaired unit at A1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #48
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #48
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #48
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #48
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 48
+
+    0   1   2   3   4  
+A: dA9 dT1 aF1  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #49
+INFO:root:Unit at A2 attacked unit at A1 by Player.Attacker
+
+INFO:root:---Action Information---
+INFO:root:Turn #49
+INFO:root:Unit at A2 repaired unit at A2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #49
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #49
+INFO:root:move from D4 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #49
+INFO:root:move from E2 to D2 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #49
+INFO:root:move from E2 to E1 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #49
+INFO:root:move from E3 to D3 by Player.Attacker
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #49
+INFO:root:Unit at A2 attacked unit at A1 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 49
+
+    0   1   2   3   4  
+A: dA9  .   .   .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #50
+INFO:root:move from A0 to A1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #50
+INFO:root:move from B1 to C1 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #50
+INFO:root:move from B1 to B2 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #50
+INFO:root:move from C0 to D0 by Player.Defender
+
+INFO:root:---Action Information---
+
+INFO:root:Turn #50
+INFO:root:move from C0 to C1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 50
+
+    0   1   2   3   4  
+A: dA9  .   .   .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Defender wins in 50 turns
+
