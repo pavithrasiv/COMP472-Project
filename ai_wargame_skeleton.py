@@ -228,10 +228,10 @@ class Options:
     dim: int = 5
     max_depth : int | None = 4
     min_depth : int | None = 2
-    max_time : float | None = 5.0
-    game_type : GameType = GameType.AttackerVsComp
-    alpha_beta : bool = True
-    max_turns : int | None = 100
+    max_time : float | None = None
+    game_type : GameType = None
+    alpha_beta : bool = None
+    max_turns : int | None = None
     randomize_moves : bool = True
     broker : str | None = None
 
@@ -396,8 +396,6 @@ class Game:
             else: 
                 return False
             
-        
-
 
     def in_combat(self, coords) -> bool:
         """ Checks adjacent cells for enemy units. If present, unit is in combat"""
@@ -520,6 +518,45 @@ class Game:
             self.remove_dead(coords.src)
             return "Self-destruction occurred."
         return "Self-destruction failed."
+    
+
+    # Heuristic function e0 (given)
+    # Heuristic that uses the number of unit for each type
+    def heuristic_e0(self) -> int:
+        Vp1, Tp1, Fp1, Pp1, AIp1 = 0, 0, 0, 0, 0
+        Vp2, Tp2, Fp2, Pp2, AIp2 = 0, 0, 0, 0, 0
+        
+        for coord in CoordPair.from_dim(self.options.dim).iter_rectangle():
+                unit = self.get(coord)
+                if unit is not None:
+                    if unit.player is Player.Attacker:
+                        if unit.type == UnitType.Virus:
+                            Vp1 += 1
+                        if unit.type == UnitType.Tech:
+                            Tp1 += 1
+                        if unit.type == UnitType.Firewall:
+                            Fp1 += 1
+                        if unit.type == UnitType.Program:
+                            Pp1 += 1
+                        if unit.type == UnitType.AI:
+                            AIp1 += 1
+
+                    elif unit.player is Player.Defender:
+                        if unit.type == UnitType.Virus:
+                            Vp2 += 1
+                        if unit.type == UnitType.Tech:
+                            Tp2 += 1
+                        if unit.type == UnitType.Firewall:
+                            Fp2 += 1
+                        if unit.type == UnitType.Program:
+                            Pp2 += 1
+                        if unit.type == UnitType.AI:
+                            AIp2 += 1
+                        
+
+        e0 = (3*Vp1 + 3*Tp1 + 3*Fp1 + 3*Pp1 + 9999*AIp1) - (3*Vp2 + 3*Tp2 + 3*Fp2 + 3*Pp2 + 9999*AIp2)
+
+        return e0
 
     def heuristic_e1(self) -> float:
         """ Heuristic which uses the units' current health to assess the game state """
@@ -867,6 +904,59 @@ def main():
 
     # create a new game
     game = Game(options=options)
+
+    # User input of the maximum number of turns
+    # Prompt the user to input a value until a valid integer is written 
+    while True:
+        try:
+            max_turns = int(input("Enter the maximum number of turns: "))
+            options.max_turns = max_turns
+            break
+        # Output error if the input value is not an integer
+        except ValueError:
+            print("Invalid! Please enter a valid integer.")
+
+    # User input of the maximum allowed time for the AI to return a move
+    # Prompt the user to input a value until a valid float is written 
+    while True:
+        try:
+            max_time = float(input("Enter the maximum allowed time for the AI to return a move: "))
+            options.max_time = max_time
+            break
+        # Output error if the input value is not a float
+        except ValueError:
+            print("Invalid! Please enter a valid float.")
+
+    # User input (TRUE or FALSE) for use of either minimax (FALSE) or alpha-beta (TRUE)
+    # Prompt the user to input either true or false 
+    while True:
+        alpha_beta = (input("Enter false (minimax) or true (alpha-beta): "))
+        if alpha_beta in ["true", "false"]:
+            options.alpha_beta = alpha_beta == "true"
+            break
+        # Output error if the input value is not from the allowed inputs
+        else:
+            print("Invalid! Please enter either true or false.")
+
+    # User input for play mode
+    # Prompt the user to input either attacker (H-AI), defender (AI-H), manual (H-H), or ai (AI-AI)
+    while True:
+        game_type = (input("Enter enter the play mode (attacker, defender, manual, or ai): "))
+        if game_type == "attacker":
+            options.game_type = GameType.AttackerVsComp
+            break
+        elif game_type == "defender":
+            options.game_type = GameType.CompVsDefender
+            break
+        elif game_type == "manual":
+            options.game_type = GameType.AttackerVsDefender
+            break
+        elif game_type == "ai":
+            options.game_type = GameType.CompVsComp
+            break
+        # Output error if the input value is not from the allowed inputs
+        else:
+            print("Invalid! Please enter a valid input.")
 
     # the main game loop
     while True:
