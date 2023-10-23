@@ -1,0 +1,1027 @@
+INFO:root:---GAME PARAMETERS---
+
+INFO:root:Timeout Value: 5.0 s
+
+INFO:root:Maximum number of turns: 100
+
+INFO:root:
+
+INFO:root:---Initial Configuration of the Game---
+
+INFO:root:
+
+INFO:root:Next player: Attacker
+Turns played: 0
+
+    0   1   2   3   4  
+A: dA9 dT9 dF9  .   .  
+B: dT9 dP9  .   .   .  
+C: dF9  .   .   .  aP9 
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.014556
+INFO:root:Cumulative evals: 12
+INFO:root:---Action Information---
+
+INFO:root:Turn #1
+INFO:root:move from C4 to B4 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 1
+
+    0   1   2   3   4  
+A: dA9 dT9 dF9  .   .  
+B: dT9 dP9  .   .  aP9 
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.012999
+INFO:root:Cumulative evals: 24
+INFO:root:---Action Information---
+
+INFO:root:Turn #2
+INFO:root:move from A2 to B2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 2
+
+    0   1   2   3   4  
+A: dA9 dT9  .   .   .  
+B: dT9 dP9 dF9  .  aP9 
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.014
+INFO:root:Cumulative evals: 37
+INFO:root:---Action Information---
+
+INFO:root:Turn #3
+INFO:root:move from B4 to A4 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 3
+
+    0   1   2   3   4  
+A: dA9 dT9  .   .  aP9 
+B: dT9 dP9 dF9  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.013499
+INFO:root:Cumulative evals: 49
+INFO:root:---Action Information---
+
+INFO:root:Turn #4
+INFO:root:move from A1 to A2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 4
+
+    0   1   2   3   4  
+A: dA9  .  dT9  .  aP9 
+B: dT9 dP9 dF9  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.012498
+INFO:root:Cumulative evals: 61
+INFO:root:---Action Information---
+
+INFO:root:Turn #5
+INFO:root:move from A4 to A3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 5
+
+    0   1   2   3   4  
+A: dA9  .  dT9 aP9  .  
+B: dT9 dP9 dF9  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.0155
+INFO:root:Cumulative evals: 76
+INFO:root:---Action Information---
+
+INFO:root:Turn #6
+INFO:root:move from A0 to A1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 6
+
+    0   1   2   3   4  
+A:  .  dA9 dT9 aP9  .  
+B: dT9 dP9 dF9  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.0145
+INFO:root:Cumulative evals: 90
+INFO:root:---Action Information---
+
+INFO:root:Turn #7
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 7
+
+    0   1   2   3   4  
+A:  .  dA9 dT6 aP6  .  
+B: dT9 dP9 dF9  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.017416
+INFO:root:Cumulative evals: 107
+INFO:root:---Action Information---
+INFO:root:Turn #8
+INFO:root:Unit at A1 repaired unit at A2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 8
+
+    0   1   2   3   4  
+A:  .  dA9 dT7 aP6  .  
+B: dT9 dP9 dF9  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.01494
+INFO:root:Cumulative evals: 121
+INFO:root:---Action Information---
+
+INFO:root:Turn #9
+INFO:root:Unit at A3 attacked unit at A2 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 9
+
+    0   1   2   3   4  
+A:  .  dA9 dT4 aP3  .  
+B: dT9 dP9 dF9  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.017066
+INFO:root:Cumulative evals: 138
+INFO:root:---Action Information---
+INFO:root:Turn #10
+INFO:root:Unit at A1 repaired unit at A2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 10
+
+    0   1   2   3   4  
+A:  .  dA9 dT5 aP3  .  
+B: dT9 dP9 dF9  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.020062
+INFO:root:Cumulative evals: 152
+INFO:root:---Action Information---
+
+INFO:root:Turn #11
+INFO:root:move from A3 to B3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 11
+
+    0   1   2   3   4  
+A:  .  dA9 dT5  .   .  
+B: dT9 dP9 dF9 aP3  .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.016498
+INFO:root:Cumulative evals: 168
+INFO:root:---Action Information---
+INFO:root:Turn #12
+INFO:root:Unit at A1 repaired unit at A2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 12
+
+    0   1   2   3   4  
+A:  .  dA9 dT6  .   .  
+B: dT9 dP9 dF9 aP3  .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.016069
+INFO:root:Cumulative evals: 183
+INFO:root:---Action Information---
+
+INFO:root:Turn #13
+INFO:root:move from B3 to A3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 13
+
+    0   1   2   3   4  
+A:  .  dA9 dT6 aP3  .  
+B: dT9 dP9 dF9  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.017578
+INFO:root:Cumulative evals: 200
+INFO:root:---Action Information---
+INFO:root:Turn #14
+INFO:root:Unit at A1 repaired unit at A2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 14
+
+    0   1   2   3   4  
+A:  .  dA9 dT7 aP3  .  
+B: dT9 dP9 dF9  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.014999
+INFO:root:Cumulative evals: 214
+INFO:root:---Action Information---
+
+INFO:root:Turn #15
+INFO:root:move from A3 to B3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 15
+
+    0   1   2   3   4  
+A:  .  dA9 dT7  .   .  
+B: dT9 dP9 dF9 aP3  .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.016997
+INFO:root:Cumulative evals: 230
+INFO:root:---Action Information---
+INFO:root:Turn #16
+INFO:root:Unit at A1 repaired unit at A2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 16
+
+    0   1   2   3   4  
+A:  .  dA9 dT8  .   .  
+B: dT9 dP9 dF9 aP3  .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.015435
+INFO:root:Cumulative evals: 245
+INFO:root:---Action Information---
+
+INFO:root:Turn #17
+INFO:root:move from B3 to A3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 17
+
+    0   1   2   3   4  
+A:  .  dA9 dT8 aP3  .  
+B: dT9 dP9 dF9  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.017497
+INFO:root:Cumulative evals: 262
+INFO:root:---Action Information---
+INFO:root:Turn #18
+INFO:root:Unit at A1 repaired unit at A2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 18
+
+    0   1   2   3   4  
+A:  .  dA9 dT9 aP3  .  
+B: dT9 dP9 dF9  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.014998
+INFO:root:Cumulative evals: 276
+INFO:root:---Action Information---
+
+INFO:root:Turn #19
+INFO:root:move from A3 to B3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 19
+
+    0   1   2   3   4  
+A:  .  dA9 dT9  .   .  
+B: dT9 dP9 dF9 aP3  .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.016085
+INFO:root:Cumulative evals: 291
+INFO:root:---Action Information---
+
+INFO:root:Turn #20
+INFO:root:move from A2 to A3 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 20
+
+    0   1   2   3   4  
+A:  .  dA9  .  dT9  .  
+B: dT9 dP9 dF9 aP3  .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.015499
+INFO:root:Cumulative evals: 306
+INFO:root:---Action Information---
+
+INFO:root:Turn #21
+INFO:root:Unit at B3 attacked unit at B2 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 21
+
+    0   1   2   3   4  
+A:  .  dA9  .  dT9  .  
+B: dT9 dP9 dF8 aP2  .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.0185
+INFO:root:Cumulative evals: 325
+INFO:root:---Action Information---
+
+INFO:root:Turn #22
+INFO:root:move from A1 to A2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 22
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT9  .  
+B: dT9 dP9 dF8 aP2  .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.015546
+INFO:root:Cumulative evals: 340
+INFO:root:---Action Information---
+
+INFO:root:Turn #23
+INFO:root:Unit at B3 attacked unit at B2 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 23
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT9  .  
+B: dT9 dP9 dF7 aP1  .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.018555
+INFO:root:Cumulative evals: 359
+INFO:root:---Action Information---
+
+INFO:root:Turn #24
+INFO:root:Unit at A3 attacked unit at B3 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 24
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT8  .  
+B: dT9 dP9 dF7  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .  aF9 aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.010998
+INFO:root:Cumulative evals: 369
+INFO:root:---Action Information---
+
+INFO:root:Turn #25
+INFO:root:move from D3 to C3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 25
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT8  .  
+B: dT9 dP9 dF7  .   .  
+C: dF9  .   .  aF9  .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.016998
+INFO:root:Cumulative evals: 386
+INFO:root:---Action Information---
+INFO:root:Turn #26
+INFO:root:Unit at A2 repaired unit at B2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 26
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT8  .  
+B: dT9 dP9 dF7  .   .  
+C: dF9  .   .  aF9  .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.0125
+INFO:root:Cumulative evals: 398
+INFO:root:---Action Information---
+
+INFO:root:Turn #27
+INFO:root:move from C3 to B3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 27
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT8  .  
+B: dT9 dP9 dF7 aF9  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.018931
+INFO:root:Cumulative evals: 418
+INFO:root:---Action Information---
+INFO:root:Turn #28
+INFO:root:Unit at A2 repaired unit at B2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 28
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT8  .  
+B: dT9 dP9 dF7 aF9  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.013999
+INFO:root:Cumulative evals: 432
+INFO:root:---Action Information---
+
+INFO:root:Turn #29
+INFO:root:Unit at B3 attacked unit at A3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 29
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT7  .  
+B: dT9 dP9 dF7 aF8  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.018997
+INFO:root:Cumulative evals: 452
+INFO:root:---Action Information---
+INFO:root:Turn #30
+INFO:root:Unit at A2 repaired unit at B2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 30
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT7  .  
+B: dT9 dP9 dF7 aF8  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.013946
+INFO:root:Cumulative evals: 466
+INFO:root:---Action Information---
+
+INFO:root:Turn #31
+INFO:root:Unit at B3 attacked unit at A3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 31
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT6  .  
+B: dT9 dP9 dF7 aF7  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.018925
+INFO:root:Cumulative evals: 486
+INFO:root:---Action Information---
+INFO:root:Turn #32
+INFO:root:Unit at A2 repaired unit at B2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 32
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT6  .  
+B: dT9 dP9 dF7 aF7  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.013997
+INFO:root:Cumulative evals: 500
+INFO:root:---Action Information---
+
+INFO:root:Turn #33
+INFO:root:Unit at B3 attacked unit at A3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 33
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT5  .  
+B: dT9 dP9 dF7 aF6  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.01892
+INFO:root:Cumulative evals: 520
+INFO:root:---Action Information---
+INFO:root:Turn #34
+INFO:root:Unit at A2 repaired unit at B2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 34
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT5  .  
+B: dT9 dP9 dF7 aF6  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.013999
+INFO:root:Cumulative evals: 534
+INFO:root:---Action Information---
+
+INFO:root:Turn #35
+INFO:root:Unit at B3 attacked unit at A3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 35
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT4  .  
+B: dT9 dP9 dF7 aF5  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.01893
+INFO:root:Cumulative evals: 554
+INFO:root:---Action Information---
+INFO:root:Turn #36
+INFO:root:Unit at A2 repaired unit at B2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 36
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT4  .  
+B: dT9 dP9 dF7 aF5  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.014997
+INFO:root:Cumulative evals: 568
+INFO:root:---Action Information---
+
+INFO:root:Turn #37
+INFO:root:Unit at B3 attacked unit at A3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 37
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT3  .  
+B: dT9 dP9 dF7 aF4  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.018998
+INFO:root:Cumulative evals: 588
+INFO:root:---Action Information---
+INFO:root:Turn #38
+INFO:root:Unit at A2 repaired unit at B2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 38
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT3  .  
+B: dT9 dP9 dF7 aF4  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.013999
+INFO:root:Cumulative evals: 602
+INFO:root:---Action Information---
+
+INFO:root:Turn #39
+INFO:root:Unit at B3 attacked unit at A3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 39
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT2  .  
+B: dT9 dP9 dF7 aF3  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.018996
+INFO:root:Cumulative evals: 622
+INFO:root:---Action Information---
+INFO:root:Turn #40
+INFO:root:Unit at A2 repaired unit at B2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 40
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT2  .  
+B: dT9 dP9 dF7 aF3  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.013566
+INFO:root:Cumulative evals: 636
+INFO:root:---Action Information---
+
+INFO:root:Turn #41
+INFO:root:Unit at B3 attacked unit at A3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 41
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT1  .  
+B: dT9 dP9 dF7 aF2  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.018999
+INFO:root:Cumulative evals: 656
+INFO:root:---Action Information---
+INFO:root:Turn #42
+INFO:root:Unit at A2 repaired unit at B2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 42
+
+    0   1   2   3   4  
+A:  .   .  dA9 dT1  .  
+B: dT9 dP9 dF7 aF2  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 0
+INFO:root:Time for this action: 0.013555
+INFO:root:Cumulative evals: 670
+INFO:root:---Action Information---
+
+INFO:root:Turn #43
+INFO:root:Unit at B3 attacked unit at A3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 43
+
+    0   1   2   3   4  
+A:  .   .  dA9  .   .  
+B: dT9 dP9 dF7 aF1  .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.014999
+INFO:root:Cumulative evals: 686
+INFO:root:---Action Information---
+
+INFO:root:Turn #44
+INFO:root:Unit at B2 attacked unit at B3 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 44
+
+    0   1   2   3   4  
+A:  .   .  dA9  .   .  
+B: dT9 dP9 dF6  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .  aV9 
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.008499
+INFO:root:Cumulative evals: 695
+INFO:root:---Action Information---
+
+INFO:root:Turn #45
+INFO:root:move from D4 to C4 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 45
+
+    0   1   2   3   4  
+A:  .   .  dA9  .   .  
+B: dT9 dP9 dF6  .   .  
+C: dF9  .   .   .  aV9 
+D:  .   .   .   .   .  
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.012998
+INFO:root:Cumulative evals: 709
+INFO:root:---Action Information---
+INFO:root:Turn #46
+INFO:root:Unit at A2 repaired unit at B2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 46
+
+    0   1   2   3   4  
+A:  .   .  dA9  .   .  
+B: dT9 dP9 dF6  .   .  
+C: dF9  .   .   .  aV9 
+D:  .   .   .   .   .  
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.010499
+INFO:root:Cumulative evals: 720
+INFO:root:---Action Information---
+
+INFO:root:Turn #47
+INFO:root:move from C4 to B4 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 47
+
+    0   1   2   3   4  
+A:  .   .  dA9  .   .  
+B: dT9 dP9 dF6  .  aV9 
+C: dF9  .   .   .   .  
+D:  .   .   .   .   .  
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.013561
+INFO:root:Cumulative evals: 734
+INFO:root:---Action Information---
+INFO:root:Turn #48
+INFO:root:Unit at A2 repaired unit at B2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 48
+
+    0   1   2   3   4  
+A:  .   .  dA9  .   .  
+B: dT9 dP9 dF6  .  aV9 
+C: dF9  .   .   .   .  
+D:  .   .   .   .   .  
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.009994
+INFO:root:Cumulative evals: 745
+INFO:root:---Action Information---
+
+INFO:root:Turn #49
+INFO:root:move from B4 to A4 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 49
+
+    0   1   2   3   4  
+A:  .   .  dA9  .  aV9 
+B: dT9 dP9 dF6  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .   .  
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.013504
+INFO:root:Cumulative evals: 759
+INFO:root:---Action Information---
+INFO:root:Turn #50
+INFO:root:Unit at A2 repaired unit at B2 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 50
+
+    0   1   2   3   4  
+A:  .   .  dA9  .  aV9 
+B: dT9 dP9 dF6  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .   .  
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.009499
+INFO:root:Cumulative evals: 769
+INFO:root:---Action Information---
+
+INFO:root:Turn #51
+INFO:root:move from A4 to A3 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 51
+
+    0   1   2   3   4  
+A:  .   .  dA9 aV9  .  
+B: dT9 dP9 dF6  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .   .  
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.01442
+INFO:root:Cumulative evals: 784
+INFO:root:---Action Information---
+
+INFO:root:Turn #52
+INFO:root:move from A2 to A1 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 52
+
+    0   1   2   3   4  
+A:  .  dA9  .  aV9  .  
+B: dT9 dP9 dF6  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .   .  
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.010498
+INFO:root:Cumulative evals: 795
+INFO:root:---Action Information---
+
+INFO:root:Turn #53
+INFO:root:move from A3 to A2 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 53
+
+    0   1   2   3   4  
+A:  .  dA9 aV9  .   .  
+B: dT9 dP9 dF6  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .   .  
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.015499
+INFO:root:Cumulative evals: 812
+INFO:root:---Action Information---
+
+INFO:root:Turn #54
+INFO:root:move from A1 to A0 by Player.Defender
+
+INFO:root:Next player: Attacker
+Turns played: 54
+
+    0   1   2   3   4  
+A: dA9  .  aV9  .   .  
+B: dT9 dP9 dF6  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .   .  
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.009947
+INFO:root:Cumulative evals: 823
+INFO:root:---Action Information---
+
+INFO:root:Turn #55
+INFO:root:move from A2 to A1 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 55
+
+    0   1   2   3   4  
+A: dA9 aV9  .   .   .  
+B: dT9 dP9 dF6  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .   .  
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: -3
+INFO:root:Time for this action: 0.013576
+INFO:root:Cumulative evals: 838
+INFO:root:Next player: Attacker
+Turns played: 56
+
+    0   1   2   3   4  
+A: dA9 aV9  .   .   .  
+B: dT9 dP9 dF6  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .   .  
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Heuristic score: 9993
+INFO:root:Time for this action: 0.010498
+INFO:root:Cumulative evals: 849
+INFO:root:---Action Information---
+
+INFO:root:Turn #57
+INFO:root:Unit at A1 attacked unit at A0 by Player.Attacker
+
+INFO:root:Next player: Defender
+Turns played: 57
+
+    0   1   2   3   4  
+A:  .   .   .   .   .  
+B: dT9 dP9 dF6  .   .  
+C: dF9  .   .   .   .  
+D:  .   .   .   .   .  
+E:  .   .  aP9 aV9 aA9 
+
+INFO:root:Attacker wins in 57 turns
+
