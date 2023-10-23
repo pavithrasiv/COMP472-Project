@@ -467,7 +467,7 @@ class Game:
             if self.in_repair(coords):
             #check if its not the next player, want to repair
                 repair = self.unit_repair(coords)
-                if True:
+                if not calledFromMinimax:
                     logging.info('---Action Information---')
                     logging.info(f'Turn #{self.turns_played+1}')
                     logging.info(f'Unit at {coords.src.to_string()} repaired unit at {coords.dst.to_string()} by {self.next_player}\n')
@@ -483,14 +483,14 @@ class Game:
                         self.mod_health(coords.src, -damage)
                         #Decrease health of the target unit according to the damage table
                         self.mod_health(coords.dst, -damage)
-                        if True:
+                        if not calledFromMinimax:
                             logging.info('---Action Information---\n')
                             logging.info(f'Turn #{self.turns_played+1}')
                             logging.info(f'Unit at {coords.src.to_string()} attacked unit at {coords.dst.to_string()} by {self.next_player}\n')
                     elif coords.src == coords.dst:
                         self.unit_self_destruct(coords)
                         self.set(coords.src, None)
-                        if True:
+                        if not calledFromMinimax:
                             logging.info('---Action Information---\n')
                             logging.info(f'Turn #{self.turns_played+1}')
                             logging.info(f'Unit at {coords.src.to_string()} self destructed by {self.next_player}\n')
@@ -499,10 +499,12 @@ class Game:
                     #if there is no unit at the destination, move the source to that coordinate
                     self.set(coords.dst,self.get(coords.src))
                     self.set(coords.src,None)
-                    if True:
+                    if not calledFromMinimax:
                         logging.info('---Action Information---\n')
                         logging.info(f'Turn #{self.turns_played+1}')
                         logging.info(f'move from {coords.src.to_string()} to {coords.dst.to_string()} by {self.next_player}\n')
+            if calledFromMinimax:
+                self.next_turn()
             return (True,"")
         return (False,"invalid move")
 
