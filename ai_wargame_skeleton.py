@@ -467,7 +467,7 @@ class Game:
             if self.in_repair(coords):
             #check if its not the next player, want to repair
                 repair = self.unit_repair(coords)
-                if not calledFromMinimax:
+                if True:
                     logging.info('---Action Information---')
                     logging.info(f'Turn #{self.turns_played+1}')
                     logging.info(f'Unit at {coords.src.to_string()} repaired unit at {coords.dst.to_string()} by {self.next_player}\n')
@@ -483,14 +483,14 @@ class Game:
                         self.mod_health(coords.src, -damage)
                         #Decrease health of the target unit according to the damage table
                         self.mod_health(coords.dst, -damage)
-                        if not calledFromMinimax:
+                        if True:
                             logging.info('---Action Information---\n')
                             logging.info(f'Turn #{self.turns_played+1}')
                             logging.info(f'Unit at {coords.src.to_string()} attacked unit at {coords.dst.to_string()} by {self.next_player}\n')
                     elif coords.src == coords.dst:
                         self.unit_self_destruct(coords)
                         self.set(coords.src, None)
-                        if not calledFromMinimax:
+                        if True:
                             logging.info('---Action Information---\n')
                             logging.info(f'Turn #{self.turns_played+1}')
                             logging.info(f'Unit at {coords.src.to_string()} self destructed by {self.next_player}\n')
@@ -499,7 +499,7 @@ class Game:
                     #if there is no unit at the destination, move the source to that coordinate
                     self.set(coords.dst,self.get(coords.src))
                     self.set(coords.src,None)
-                    if not calledFromMinimax:
+                    if True:
                         logging.info('---Action Information---\n')
                         logging.info(f'Turn #{self.turns_played+1}')
                         logging.info(f'move from {coords.src.to_string()} to {coords.dst.to_string()} by {self.next_player}\n')
@@ -606,16 +606,20 @@ class Game:
         e1 = attackerHealth - defenderHealth
         return e1
 
-    def minimax_withab(self, depth, max_player, alpha = -float('inf'), beta = float('inf'), current_depth = 0):
+    def minimax_withab(self, depth, max_player, alpha, beta):
         """ Function for determining best move for AI to make using minimax algorithm and alpha beta pruning """
         start_time = datetime.now()
         if depth == 0 or self.has_winner() is not None:
-            return self.heuristic_e1, None, current_depth
+            if self.options.heuristic == 0:
+                return self.heuristic_e0(), None, depth
+            if self.options.heuristic == 1:
+                return self.heuristic_e1(), None, depth
+            if self.options.heuristic == 2:
+                return self.heuristic_e2(), None, depth
 
         if max_player:
             max_eval = -float('inf')
             best_move = None
-            total_depth = current_depth
             count = 0
             for move in self.move_candidates():
                 elapsed_seconds = (datetime.now() - start_time).total_seconds()
@@ -626,17 +630,11 @@ class Game:
                     break
                 self_clone = self.clone()
                 self_clone.perform_move(move, True)
-                # Check which heuristic to evaluate with
-                if self.options.heuristic == 0:
-                    eval = self_clone.heuristic_e0()
-                if self.options.heuristic == 1:
-                    eval = self_clone.heuristic_e1()
-                if self.options.heuristic == 2:
-                    eval = self_clone.heuristic_e2()
-                if eval > max_eval:
-                    max_eval = eval
+                eval = self_clone.minimax_withab(depth - 1, False, alpha, beta)
+                if eval[0] > max_eval:
+                    max_eval = eval[0]
                     best_move = move
-                alpha = max(alpha, eval)
+                alpha = max(alpha, eval[0])
                 if beta <= alpha:
                     break # Beta cutoff
                 count += 1
@@ -644,7 +642,6 @@ class Game:
         else:
             min_eval = float('inf')
             best_move = None
-            total_depth = current_depth
             count = 0
             for move in self.move_candidates():
                 elapsed_seconds = (datetime.now() - start_time).total_seconds()
@@ -655,31 +652,30 @@ class Game:
                     break
                 self_clone = self.clone()
                 self_clone.perform_move(move, True)
-                if self.options.heuristic == 0:
-                    eval = self_clone.heuristic_e0()
-                if self.options.heuristic == 1:
-                    eval = self_clone.heuristic_e1()
-                if self.options.heuristic == 2:
-                    eval = self_clone.heuristic_e2()
-                if eval < min_eval:
-                    min_eval = eval
+                eval = self_clone.minimax_withab(depth - 1, True, alpha, beta)
+                if eval[0] < min_eval:
+                    min_eval = eval[0]
                     best_move = move
-                beta = min(beta, eval)
+                beta = min(beta, eval[0])
                 if beta <= alpha:
                     break # Alpha cutoff
                 count += 1
             return min_eval, best_move, count
 
-    def minimax(self, depth, max_player, current_depth = 0):
+    def minimax(self, depth, max_player):
         """ Function for determining best move for AI to make using minimax algoritm """
         start_time = datetime.now()
         if depth == 0 or self.has_winner() is not None:
-            return self.heuristic_e1, None, current_depth
+            if self.options.heuristic == 0:
+                return self.heuristic_e0(), None, depth
+            if self.options.heuristic == 1:
+                return self.heuristic_e1(), None, depth
+            if self.options.heuristic == 2:
+                return self.heuristic_e2(), None, depth
 
         if max_player:
             max_eval = -float('inf')
             best_move = None
-            total_depth = 0
             count = 0
             for move in self.move_candidates():
                 elapsed_seconds = (datetime.now() - start_time).total_seconds()
@@ -690,22 +686,15 @@ class Game:
                     break
                 self_clone = self.clone()
                 self_clone.perform_move(move, True)
-                if self.options.heuristic == 0:
-                    eval = self_clone.heuristic_e0()
-                if self.options.heuristic == 1:
-                    eval = self_clone.heuristic_e1()
-                if self.options.heuristic == 2:
-                    eval = self_clone.heuristic_e2()
-                if eval > max_eval:
-                    max_eval = eval
+                eval = self_clone.minimax(depth - 1, False)
+                if eval[0] > max_eval:
+                    max_eval = eval[0]
                     best_move = move
-                total_depth += current_depth
                 count += 1
             return max_eval, best_move, count
         else:
             min_eval = float('inf')
             best_move = None
-            total_depth = current_depth
             count = 0
             for move in self.move_candidates():
                 elapsed_seconds = (datetime.now() - start_time).total_seconds()
@@ -716,16 +705,10 @@ class Game:
                     break
                 self_clone = self.clone()
                 self_clone.perform_move(move, True)
-                if self.options.heuristic == 0:
-                    eval = self_clone.heuristic_e0()
-                if self.options.heuristic == 1:
-                    eval = self_clone.heuristic_e1()
-                if self.options.heuristic == 2:
-                    eval = self_clone.heuristic_e2()
-                if eval < min_eval:
-                    min_eval = eval
+                eval = self_clone.minimax(depth - 1, True)
+                if eval[0] < min_eval:
+                    min_eval = eval[0]
                     best_move = move
-                total_depth += current_depth
                 count += 1
             return min_eval, best_move, count
 
@@ -869,9 +852,9 @@ class Game:
         start_time = datetime.now()
         if self.options.alpha_beta:
             if self.next_player is Player.Attacker:
-                (score, move, evals) = self.minimax_withab(depth = self.options.max_depth, max_player=True)
+                (score, move, evals) = self.minimax_withab(depth = self.options.max_depth, max_player=True, alpha=-float('inf'), beta=float('inf'))
             else:
-                (score, move, evals) = self.minimax_withab(depth = self.options.max_depth, max_player=False)
+                (score, move, evals) = self.minimax_withab(depth = self.options.max_depth, max_player=False, alpha=-float('inf'), beta=float('inf'))
         else:
             if self.next_player is Player.Attacker:
                 (score, move, evals) = self.minimax(depth = self.options.max_depth, max_player=True)
@@ -1050,7 +1033,7 @@ def main():
                 print("Invalid! Please enter a valid input.")
 
         while True:
-            depth = (input("Enter the depth for the minimax algorithms: "))
+            depth = int(input("Enter the depth for the minimax algorithms: "))
             options.max_depth = depth
             break
 
